@@ -1,6 +1,37 @@
 import Chip from "../components/Chip";
 import ContactSection from "../components/ContactSection";
 
+type WorkType = "Full-time" | "Director";
+
+function WorkExperienceItem({
+  startYear,
+  endYear,
+  current,
+  company,
+  title,
+  type,
+}: {
+  startYear: number;
+  endYear?: number;
+  current?: boolean;
+  company: string;
+  title: string;
+  type: WorkType;
+}) {
+  return (
+    <div className="flex flex-col items-center gap-6 p-5 text-sm">
+      <div className="flex flex-col items-center gap-2">
+        <p className="text-neutral-400">{`${startYear}${
+          current ? " —  Present" : endYear ? ` — ${endYear}` : ""
+        }`}</p>
+        <p className="text-lg font-medium">{company}</p>
+        <p className="text-neutral-400">{title}</p>
+      </div>
+      <Chip>{type}</Chip>
+    </div>
+  );
+}
+
 export default function Profile() {
   return (
     <>
@@ -25,12 +56,56 @@ export default function Profile() {
         </p>
       </section>
 
-      <section>
+      <section className="flex w-full flex-col items-center gap-4 px-10 py-36">
         <Chip>Experience</Chip>
+        <p className="text-center text-4xl font-medium">
+          {"Where I've worked"}
+        </p>
+
+        <div className="gapy-5 grid w-full grid-cols-2 gap-x-0 p-5 md:grid-cols-3">
+          <WorkExperienceItem
+            startYear={2013}
+            current
+            company="Bryndsey Studio"
+            title="Developer"
+            type="Director"
+          />
+          <WorkExperienceItem
+            startYear={2018}
+            current
+            company="Big Nerd Ranch"
+            title="Solution Architect"
+            type="Full-time"
+          />
+          <WorkExperienceItem
+            startYear={2015}
+            endYear={2018}
+            company="Metova"
+            title="Senior Developer"
+            type="Full-time"
+          />
+          <WorkExperienceItem
+            startYear={2014}
+            endYear={2015}
+            company="Asurion"
+            title="Developer"
+            type="Full-time"
+          />
+          <WorkExperienceItem
+            startYear={2012}
+            endYear={2014}
+            company="HP Exstream"
+            title="Developer"
+            type="Full-time"
+          />
+        </div>
       </section>
 
-      <section>
+      <section className="flex w-full flex-col items-center gap-4 px-10 py-36">
         <Chip>Clients</Chip>
+        <p className="text-center text-4xl font-medium">
+          {"Who I've worked with"}
+        </p>
       </section>
 
       <ContactSection />
