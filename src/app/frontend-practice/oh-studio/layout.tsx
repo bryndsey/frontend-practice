@@ -32,7 +32,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     >
       <nav className="fixed top-8 flex flex-row gap-2 rounded-full bg-stone-200 bg-opacity-50 p-1 text-sm backdrop-blur">
         <NavBarItem href={"/frontend-practice/oh-studio"} text="Home" />
-        <NavBarItem href={"/frontend-practice/oh-studio"} text="Profile" />
+        <NavBarItem
+          href={"/frontend-practice/oh-studio/profile"}
+          text="Profile"
+        />
         <NavBarItem
           href={"/frontend-practice/oh-studio/contact"}
           text="Contact"
