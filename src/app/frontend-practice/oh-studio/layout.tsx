@@ -33,10 +33,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <nav className="fixed top-8 flex flex-row gap-2 rounded-full bg-stone-200 bg-opacity-50 p-1 text-sm backdrop-blur">
         <NavBarItem href={"/frontend-practice/oh-studio"} text="Home" />
         <NavBarItem href={"/frontend-practice/oh-studio"} text="Profile" />
-        <NavBarItem href={"/frontend-practice/oh-studio"} text="Contact" />
+        <NavBarItem
+          href={"/frontend-practice/oh-studio/contact"}
+          text="Contact"
+        />
       </nav>
 
-      {children}
+      <div className="mt-24 grid w-full flex-grow place-items-center">
+        {children}
+      </div>
 
       <footer className="flex w-full flex-col justify-between p-5 text-sm md:flex-row md:p-10">
         <div className="flex flex-col items-center gap-2 md:flex-row">

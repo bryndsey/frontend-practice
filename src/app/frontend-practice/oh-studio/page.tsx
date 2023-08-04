@@ -1,3 +1,5 @@
+import ContactSection from "./ContactSection";
+
 function ExpertiseListItem(props: { text: string }) {
   return (
     <li className="rounded-full bg-stone-200 bg-opacity-50 px-2.5 py-1.5">
@@ -15,7 +17,7 @@ function ProjectGridItem(props: { text: string }) {
 export default function Home() {
   return (
     <>
-      <header className="mt-24 flex min-h-[379px] flex-col items-center justify-evenly p-5 md:p-10">
+      <header className="flex min-h-[379px] flex-col items-center justify-evenly p-5 md:p-10">
         <h1 className="max-w-xl break-words text-center text-5xl font-medium leading-tight">
           A web and mobile developer working with clients globally
         </h1>
@@ -33,12 +35,7 @@ export default function Home() {
         <ProjectGridItem text="SongSpark" />
       </section>
 
-      <section className="my-8 flex flex-col items-center justify-center p-5 text-4xl font-medium leading-tight md:p-10">
-        {"Let's work together."}
-        <a href="#" className="text-neutral-500 hover:text-neutral-400">
-          {"Get in touch."}
-        </a>
-      </section>
+      <ContactSection />
     </>
   );
 }
