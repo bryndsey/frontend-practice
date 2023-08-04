@@ -31,7 +31,7 @@ export default function NavBar() {
   const currentPathname = usePathname();
 
   return (
-    <nav className="fixed top-8 flex flex-row gap-2 rounded-full bg-stone-200 bg-opacity-50 p-1 text-sm backdrop-blur">
+    <nav className="fixed top-8 z-50 flex flex-row gap-2 rounded-full bg-stone-200 bg-opacity-50 p-1 text-sm backdrop-blur">
       {navLinks.map((link) => (
         <NavBarItem
           key={link.text}
