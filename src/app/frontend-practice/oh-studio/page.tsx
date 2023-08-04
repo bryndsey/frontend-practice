@@ -49,6 +49,18 @@ export default function Home() {
         {"Let's work together."}
         <a href="#">{"Get in touch."}</a>
       </section>
+
+      <footer className="flex w-full flex-row justify-between p-10 text-sm">
+        <div className="flex flex-row items-center gap-2">
+          <div className="aspect-square w-6 rounded-full bg-green-500"></div>
+          {"© Bryan Lindsey 2023 - Copied from Oli Harris"}
+        </div>
+        <div className="flex flex-row items-center gap-4">
+          <a href="https://github.com/bryndsey">Github</a>
+          <a href="https://www.linkedin.com/in/bryan-c-lindsey/">LinkedIn</a>
+          <a href="#">Mail</a>
+        </div>
+      </footer>
     </main>
   );
 }
