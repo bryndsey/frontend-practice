@@ -1,12 +1,5 @@
+import Chip from "./Chip";
 import ContactSection from "./ContactSection";
-
-function ExpertiseListItem(props: { text: string }) {
-  return (
-    <li className="rounded-full bg-stone-200 bg-opacity-50 px-2.5 py-1.5">
-      {props.text}
-    </li>
-  );
-}
 
 function ProjectGridItem(props: { text: string }) {
   return (
@@ -23,9 +16,15 @@ export default function Home() {
         </h1>
         <ul className="hidden flex-row items-center gap-2.5 text-sm md:inline-flex">
           {"Expertise"}
-          <ExpertiseListItem text="React" />
-          <ExpertiseListItem text="Next.js" />
-          <ExpertiseListItem text="Three.js" />
+          <li>
+            <Chip>React</Chip>
+          </li>
+          <li>
+            <Chip>Next.js</Chip>
+          </li>
+          <li>
+            <Chip>Three.js</Chip>
+          </li>
         </ul>
       </header>
 
