@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import NavBar from "./NavBar";
 
 const font = localFont({
   src: [
@@ -17,30 +19,12 @@ const font = localFont({
   variable: "--font-neue-montreal",
 });
 
-function NavBarItem(props: { text: string; href: string }) {
-  return (
-    <Link className="px-6 py-2.5" href={props.href}>
-      {props.text}
-    </Link>
-  );
-}
-
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <main
       className={`flex min-h-screen flex-col items-center ${font.variable} font-sans`}
     >
-      <nav className="fixed top-8 flex flex-row gap-2 rounded-full bg-stone-200 bg-opacity-50 p-1 text-sm backdrop-blur">
-        <NavBarItem href={"/frontend-practice/oh-studio"} text="Home" />
-        <NavBarItem
-          href={"/frontend-practice/oh-studio/profile"}
-          text="Profile"
-        />
-        <NavBarItem
-          href={"/frontend-practice/oh-studio/contact"}
-          text="Contact"
-        />
-      </nav>
+      <NavBar />
 
       <div className="mt-24 grid w-full flex-grow place-items-center">
         {children}
