@@ -1,5 +1,5 @@
-import Chip from "./Chip";
-import ContactSection from "./ContactSection";
+import Chip from "./components/Chip";
+import ContactSection from "./components/ContactSection";
 
 function ProjectGridItem(props: { text: string }) {
   return (
