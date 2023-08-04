@@ -1,30 +1,3 @@
-import Link from "next/link";
-import localFont from "next/font/local";
-
-const font = localFont({
-  src: [
-    {
-      path: "./assets/NeueMontreal-Medium.otf",
-      weight: "500",
-      style: "medium",
-    },
-    {
-      path: "./assets/NeueMontreal-Regular.otf",
-      weight: "400",
-      style: "regular",
-    },
-  ],
-  variable: "--font-neue-montreal",
-});
-
-function NavBarItem(props: { text: string; href: string }) {
-  return (
-    <Link className="px-6 py-2.5" href={props.href}>
-      {props.text}
-    </Link>
-  );
-}
-
 function ExpertiseListItem(props: { text: string }) {
   return (
     <li className="rounded-full bg-stone-200 bg-opacity-50 px-2.5 py-1.5">
@@ -41,15 +14,7 @@ function ProjectGridItem(props: { text: string }) {
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center ${font.variable} font-sans`}
-    >
-      <nav className="fixed top-8 flex flex-row gap-2 rounded-full bg-stone-200 bg-opacity-50 p-1 text-sm backdrop-blur">
-        <NavBarItem href={"/frontend-practice/oh-studio"} text="Home" />
-        <NavBarItem href={"/frontend-practice/oh-studio"} text="Profile" />
-        <NavBarItem href={"/frontend-practice/oh-studio"} text="Contact" />
-      </nav>
-
+    <>
       <header className="mt-24 flex min-h-[379px] flex-col items-center justify-evenly p-5 md:p-10">
         <h1 className="max-w-xl break-words text-center text-5xl font-medium leading-tight">
           A web and mobile developer working with clients globally
@@ -74,30 +39,6 @@ export default function Home() {
           {"Get in touch."}
         </a>
       </section>
-
-      <footer className="flex w-full flex-col justify-between p-5 text-sm md:flex-row md:p-10">
-        <div className="flex flex-col items-center gap-2 md:flex-row">
-          <div className="aspect-square w-6 rounded-full bg-black"></div>
-          <a href="https://oh.studio/">{"Design by Oli Harris"}</a>
-        </div>
-        <div className="flex flex-row items-center justify-center gap-4">
-          <a
-            href="https://github.com/bryndsey"
-            className="hover:text-neutral-500"
-          >
-            Github
-          </a>
-          <a
-            href="https://www.linkedin.com/in/bryan-c-lindsey/"
-            className="hover:text-neutral-500"
-          >
-            LinkedIn
-          </a>
-          <a href="#" className="hover:text-neutral-500">
-            Mail
-          </a>
-        </div>
-      </footer>
-    </main>
+    </>
   );
 }
