@@ -32,6 +32,12 @@ function WorkExperienceItem({
   );
 }
 
+function ClientListItem({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="grid aspect-[4/3] place-content-center">{children}</div>
+  );
+}
+
 export default function Profile() {
   return (
     <>
@@ -56,13 +62,13 @@ export default function Profile() {
         </p>
       </section>
 
-      <section className="flex w-full flex-col items-center gap-4 px-10 py-36">
+      <section className="flex w-full flex-col items-center gap-4 px-10 py-10">
         <Chip>Experience</Chip>
         <p className="text-center text-4xl font-medium">
           {"Where I've worked"}
         </p>
 
-        <div className="gapy-5 grid w-full grid-cols-2 gap-x-0 p-5 md:grid-cols-3">
+        <div className="grid w-full grid-cols-2 gap-x-0 gap-y-5 p-5 md:grid-cols-3">
           <WorkExperienceItem
             startYear={2013}
             current
@@ -101,11 +107,21 @@ export default function Profile() {
         </div>
       </section>
 
-      <section className="flex w-full flex-col items-center gap-4 px-10 py-36">
+      <section className="flex w-full flex-col items-center gap-4 p-10">
         <Chip>Clients</Chip>
         <p className="text-center text-4xl font-medium">
           {"Who I've worked with"}
         </p>
+        <div className="grid w-full grid-cols-2 gap-x-0 gap-y-5 p-5 text-xl font-medium md:grid-cols-4">
+          <ClientListItem>Alice</ClientListItem>
+          <ClientListItem>Bob</ClientListItem>
+          <ClientListItem>Cindy</ClientListItem>
+          <ClientListItem>Dani</ClientListItem>
+          <ClientListItem>Esther</ClientListItem>
+          <ClientListItem>Faruk</ClientListItem>
+          <ClientListItem>Guanglei</ClientListItem>
+          <ClientListItem>Heidi</ClientListItem>
+        </div>
       </section>
 
       <ContactSection />
