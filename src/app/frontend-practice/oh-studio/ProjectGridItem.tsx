@@ -16,13 +16,19 @@ export function ProjectGridItem(props: { text: string }) {
     >
       <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
         <Image
-          className="relative h-full object-cover"
+          className="h-full object-cover"
           src={PlaceholderImage}
           alt="placeholder image"
+          fill
         />
         <div
+          className={`absolute inset-0 transition-all duration-500 ${
+            isHovering ? "md:backdrop-blur" : ""
+          } `}
+        ></div>
+        <div
           className={`absolute inset-0 bg-gray-800 opacity-0 transition-all duration-500 ${
-            isHovering ? "md:opacity-40 md:backdrop-blur" : ""
+            isHovering ? "md:opacity-20" : ""
           }`}
         />
         <div
