@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Chip from "./components/Chip";
 import ContactSection from "./components/ContactSection";
 import { ProjectGridItem } from "./ProjectGridItem";
@@ -28,6 +29,13 @@ export default function Home() {
         <ProjectGridItem text="Creative Developer" />
         <ProjectGridItem text="SongSpark" />
       </section>
+
+      <Link
+        href="/"
+        className="fixed bottom-10 mx-auto rounded-full bg-black px-6 py-3 text-sm text-white"
+      >
+        Back
+      </Link>
 
       <ContactSection />
     </>
