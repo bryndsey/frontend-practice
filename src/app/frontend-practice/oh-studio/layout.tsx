@@ -1,7 +1,6 @@
 import localFont from "next/font/local";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import NavBar from "./NavBar";
+import { Metadata } from "next";
 
 const font = localFont({
   src: [
@@ -18,6 +17,11 @@ const font = localFont({
   ],
   variable: "--font-neue-montreal",
 });
+
+export const metadata: Metadata = {
+  title: "OH.STUDIO Design Practice",
+  description: "A design adapted from https://oh.studio/",
+};
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
