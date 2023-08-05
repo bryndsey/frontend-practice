@@ -1,24 +1,6 @@
-import Image from "next/image";
 import Chip from "./components/Chip";
 import ContactSection from "./components/ContactSection";
-import PlaceholderImage from "./pexels-emilio-gonzález-17781404.jpg";
-
-function ProjectGridItem(props: { text: string }) {
-  return (
-    <a href="#" className="relative flex flex-col gap-2">
-      <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-        <Image
-          className="h-full object-cover"
-          src={PlaceholderImage}
-          alt="placeholder image"
-        />
-      </div>
-      <p className="text-sm md:absolute md:inset-4 md:text-white">
-        {props.text}
-      </p>
-    </a>
-  );
-}
+import { ProjectGridItem } from "./ProjectGridItem";
 
 export default function Home() {
   return (
