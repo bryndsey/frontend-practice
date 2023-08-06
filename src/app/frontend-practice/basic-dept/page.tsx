@@ -1,3 +1,17 @@
+function LinkButton({
+  link,
+  children,
+}: {
+  link?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <a href={link ?? "#"} className="rounded-full border px-4 py-2">
+      {children}
+    </a>
+  );
+}
+
 function EngagementItem() {
   return (
     <li className="w-[75vw] flex-shrink-0 sm:w-[40vw] md:w-[30vw]">
@@ -22,9 +36,7 @@ export default function Page() {
         <section className="grid grid-cols-1 gap-8 p-16 xl:grid-cols-2">
           <div className="flex w-1/2 flex-col items-start gap-6">
             <p>{"BRYAN/LINZ® is a person building things."}</p>
-            <button className="rounded-full border px-4 py-2">
-              SEE THE WORK
-            </button>
+            <LinkButton>SEE THE WORK</LinkButton>
           </div>
           <p className="text-end text-9xl font-extrabold">B/L®</p>
         </section>
@@ -57,9 +69,7 @@ export default function Page() {
           <div className="flex flex-col items-start gap-6">
             <q className="text-6xl font-bold">SOME TEXT HERE</q>
             <p>MORE CONTENT</p>
-            <a href="#" className="rounded-full border px-4 py-2">
-              ABOUT US
-            </a>
+            <LinkButton>ABOUT US</LinkButton>
           </div>
           <div className="aspect-[3/4] w-full bg-purple-400"></div>
         </section>
@@ -67,7 +77,7 @@ export default function Page() {
         <section className="p-10">
           <div className="flex flex-row justify-between">
             <h2>FEATURED NEWS</h2>
-            <a className="rounded-full border px-5 py-2">VIEW ALL</a>
+            <LinkButton>VIEW ALL</LinkButton>
           </div>
 
           <ul>
