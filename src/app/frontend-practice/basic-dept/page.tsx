@@ -30,6 +30,11 @@ function EngagementItem() {
 export default function Page() {
   return (
     <div className="bg-neutral-100 text-stone-800">
+      <header className="fixed left-0 right-0 top-0 flex flex-row justify-between px-14 py-10">
+        <span className="font-extrabold">{"BRYAN/LINZ®"}</span>
+        <button>{"MENU"}</button>
+      </header>
+
       <main>
         <section className="h-screen w-full bg-green-500"></section>
 
