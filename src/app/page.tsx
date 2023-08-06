@@ -34,21 +34,33 @@ function ProjectItem({
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <ul className="flex flex-col gap-48">
-        <ProjectItem
-          name="Oh.Studio Practice"
-          href="/frontend-practice/oh-studio"
-          frontendPracticeUrl="https://www.frontendpractice.com/projects/oh-studio"
-          originalSiteUrl="https://oh.studio/"
-        />
-        <ProjectItem
-          name="BASIC/DEPT Practice"
-          href="/frontend-practice/basic-dept"
-          frontendPracticeUrl="https://www.frontendpractice.com/projects/basic"
-          originalSiteUrl="https://www.basicagency.com/"
-        />
-      </ul>
+    <main className="flex flex-col overflow-hidden sm:h-screen sm:flex-row">
+      <section className="flex flex-col justify-between gap-6 bg-rose-300 p-10 sm:w-1/2 lg:p-20">
+        <h1 className="text-xl font-bold sm:text-4xl">
+          {"Bryan's Frontend Practice"}
+        </h1>
+        <p className="text-sm sm:text-base">
+          {
+            "I am developer. I am not a designer. These are sites I made copying other designs."
+          }
+        </p>
+      </section>
+      <section className="flex-1 overflow-y-scroll p-10 lg:p-20">
+        <ul className="flex w-full flex-col gap-8">
+          <ProjectItem
+            name="Oh.Studio Practice"
+            href="/frontend-practice/oh-studio"
+            frontendPracticeUrl="https://www.frontendpractice.com/projects/oh-studio"
+            originalSiteUrl="https://oh.studio/"
+          />
+          <ProjectItem
+            name="BASIC/DEPT Practice"
+            href="/frontend-practice/basic-dept"
+            frontendPracticeUrl="https://www.frontendpractice.com/projects/basic"
+            originalSiteUrl="https://www.basicagency.com/"
+          />
+        </ul>
+      </section>
     </main>
   );
 }
