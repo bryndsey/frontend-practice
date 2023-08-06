@@ -50,6 +50,17 @@ export default function Page() {
           <EngagementItem />
         </ul>
       </section>
+
+      <section className="flex flex-col-reverse gap-2 p-10 sm:grid sm:grid-cols-2">
+        <div className="flex flex-col items-start gap-6">
+          <q className="text-6xl font-bold">SOME TEXT HERE</q>
+          <p>MORE CONTENT</p>
+          <a href="#" className="rounded-full border px-4 py-2">
+            ABOUT US
+          </a>
+        </div>
+        <div className="aspect-[3/4] w-full bg-purple-400"></div>
+      </section>
     </main>
   );
 }
