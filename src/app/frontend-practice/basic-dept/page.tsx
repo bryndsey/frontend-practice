@@ -3,7 +3,7 @@ export default function Page() {
     <main className="bg-neutral-100 text-stone-800">
       <section className="h-screen w-full bg-green-500"></section>
 
-      <section className="grid grid-cols-1 p-16 lg:grid-cols-2">
+      <section className="grid grid-cols-1 gap-8 p-16 xl:grid-cols-2">
         <div className="flex w-1/2 flex-col items-start gap-6">
           <p>{"BRYAN/LINZ® is a person building things."}</p>
           <button className="rounded-full border px-4 py-2">
