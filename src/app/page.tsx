@@ -46,7 +46,7 @@ export default function Home() {
         </h1>
         <p className="text-sm sm:text-base">
           {
-            "I am developer. I am not a designer. These are sites I made copying other designs."
+            "I am developer. I am not a designer. These are sites I made by replicating other designs."
           }
         </p>
       </section>
