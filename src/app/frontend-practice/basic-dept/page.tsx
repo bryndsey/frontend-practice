@@ -6,7 +6,7 @@ function LinkButton({
   children: React.ReactNode;
 }) {
   return (
-    <a href={link ?? "#"} className="rounded-full border px-4 py-2">
+    <a href={link ?? "#"} className="rounded-full border px-4 py-2 text-xs">
       {children}
     </a>
   );
