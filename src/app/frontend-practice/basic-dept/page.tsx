@@ -13,11 +13,11 @@ export default function Page() {
         <p className="text-end text-9xl font-extrabold">B/L®</p>
       </section>
 
-      <section className="flex flex-row gap-4 overflow-x-scroll p-8">
-        <div className="aspect-[3/4] w-[80vw] flex-shrink-0 bg-blue-400 sm:w-[40vw]"></div>
-        <div className="aspect-[3/4] w-[80vw] flex-shrink-0 bg-red-400 sm:w-[40vw]"></div>
-        <div className="aspect-[3/4] w-[80vw] flex-shrink-0 bg-yellow-400 sm:w-[40vw]"></div>
-      </section>
+      <ul className="flex flex-row gap-4 overflow-x-scroll p-8">
+        <li className="aspect-[3/4] w-[75vw] flex-shrink-0 bg-blue-400 sm:w-[40vw]"></li>
+        <li className="aspect-[3/4] w-[75vw] flex-shrink-0 bg-red-400 sm:w-[40vw]"></li>
+        <li className="aspect-[3/4] w-[75vw] flex-shrink-0 bg-yellow-400 sm:w-[40vw]"></li>
+      </ul>
     </main>
   );
 }
