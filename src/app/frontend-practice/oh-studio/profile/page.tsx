@@ -1,6 +1,6 @@
 import Chip from "../components/Chip";
 import ContactSection from "../components/ContactSection";
-import RevealOnceVisible from "../components/RevealOnceVisible";
+import { RevealOnceVisible } from "../components/Reveal";
 
 type WorkType = "Full-time" | "Director";
 

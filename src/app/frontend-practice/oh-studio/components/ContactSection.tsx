@@ -1,4 +1,4 @@
-import RevealOnceVisible from "./RevealOnceVisible";
+import { RevealOnceVisible } from "./Reveal";
 
 export default function ContactSection() {
   return (

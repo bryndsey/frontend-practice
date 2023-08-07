@@ -2,7 +2,7 @@ import Link from "next/link";
 import Chip from "./components/Chip";
 import ContactSection from "./components/ContactSection";
 import { ProjectGridItem } from "./ProjectGridItem";
-import RevealOnceVisible from "./components/RevealOnceVisible";
+import { Reveal, RevealOnceVisible } from "./components/Reveal";
 
 export default function Home() {
   return (
@@ -39,17 +39,14 @@ export default function Home() {
         </section>
       </RevealOnceVisible>
 
-      <RevealOnceVisible
-        transition={{ delay: 0.75 }}
-        className="fixed bottom-8"
-      >
+      <Reveal transition={{ delay: 0.75 }} className="fixed bottom-0">
         <Link
           href="/"
-          className="mx-auto rounded-full bg-black px-6 py-3 text-sm text-white"
+          className="fixed bottom-8 mx-auto rounded-full bg-black px-6 py-3 text-sm text-white"
         >
           Back
         </Link>
-      </RevealOnceVisible>
+      </Reveal>
 
       <ContactSection />
     </>
