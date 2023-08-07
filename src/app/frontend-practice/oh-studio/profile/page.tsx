@@ -20,7 +20,7 @@ function WorkExperienceItem({
   type: WorkType;
 }) {
   return (
-    <div className="flex flex-col items-center gap-6 p-5 text-sm">
+    <div className="flex flex-col items-center gap-6 p-5 text-center text-sm">
       <div className="flex flex-col items-center gap-2">
         <p className="text-neutral-400">{`${startYear}${
           current ? " —  Present" : endYear ? ` — ${endYear}` : ""
