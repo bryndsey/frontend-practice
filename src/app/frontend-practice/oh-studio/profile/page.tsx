@@ -1,5 +1,6 @@
 import Chip from "../components/Chip";
 import ContactSection from "../components/ContactSection";
+import RevealOnceVisible from "../components/RevealOnceVisible";
 
 type WorkType = "Full-time" | "Director";
 
@@ -19,7 +20,7 @@ function WorkExperienceItem({
   type: WorkType;
 }) {
   return (
-    <div className="flex flex-col items-center gap-6 p-5 text-sm">
+    <div className="flex flex-col items-center gap-6 p-5 text-center text-sm">
       <div className="flex flex-col items-center gap-2">
         <p className="text-neutral-400">{`${startYear}${
           current ? " —  Present" : endYear ? ` — ${endYear}` : ""
@@ -41,34 +42,54 @@ function ClientListItem({ children }: { children: React.ReactNode }) {
 export default function Profile() {
   return (
     <>
-      <header className="flex min-h-[379px] flex-col items-center justify-evenly p-5 md:p-10">
-        <h1 className="max-w-xl break-words text-center text-5xl font-medium leading-tight">
-          {"Hey 👋🏼 I'm Bryan"}
-        </h1>
-      </header>
+      <RevealOnceVisible>
+        <header className="flex min-h-[379px] flex-col items-center justify-evenly p-5 md:p-10">
+          <h1 className="max-w-xl break-words text-center text-5xl font-medium leading-tight">
+            {"Hey 👋🏼 I'm Bryan"}
+          </h1>
+        </header>
+      </RevealOnceVisible>
 
       <div className="flex h-[500px] w-full flex-row gap-4 p-10">
-        <div className="h-full flex-1 rounded-3xl bg-gray-200"></div>
-        <div className="hidden h-full flex-1 rounded-3xl bg-gray-200 md:block"></div>
+        <RevealOnceVisible
+          transition={{ delay: 0.5 }}
+          className="h-full flex-1"
+        >
+          <div className="h-full rounded-3xl bg-gray-200"></div>
+        </RevealOnceVisible>
+        <RevealOnceVisible
+          transition={{ delay: 0.75 }}
+          className="hidden h-full flex-1 md:block"
+        >
+          <div className="h-full rounded-3xl bg-gray-200 "></div>
+        </RevealOnceVisible>
       </div>
 
       <section className="flex w-full flex-col items-center gap-4 px-10 py-36">
         <h2>
-          <Chip>About</Chip>
+          <RevealOnceVisible>
+            <Chip>About</Chip>
+          </RevealOnceVisible>
         </h2>
-        <p className="max-w-[600px] text-center text-4xl font-medium">
-          A creative developer based in the US. I combine my experience in
-          creativity and problem-solving to create compelling experiences.
-        </p>
+        <RevealOnceVisible transition={{ delay: 0.25 }}>
+          <p className="max-w-[600px] text-center text-4xl font-medium">
+            A creative developer based in the US. I combine my experience in
+            creativity and problem-solving to create compelling experiences.
+          </p>
+        </RevealOnceVisible>
       </section>
 
       <section className="flex w-full flex-col items-center gap-4 px-10 py-10">
-        <Chip>Experience</Chip>
-        <p className="text-center text-4xl font-medium">
-          {"Where I've worked"}
-        </p>
+        <RevealOnceVisible>
+          <Chip>Experience</Chip>
+        </RevealOnceVisible>
+        <RevealOnceVisible transition={{ delay: 0.25 }}>
+          <p className="text-center text-4xl font-medium">
+            {"Where I've worked"}
+          </p>
+        </RevealOnceVisible>
 
-        <div className="grid w-full grid-cols-2 gap-x-0 gap-y-5 p-5 md:grid-cols-3">
+        <RevealOnceVisible className="grid w-full grid-cols-2 gap-x-0 gap-y-5 p-5 md:grid-cols-3">
           <WorkExperienceItem
             startYear={2013}
             current
@@ -104,15 +125,20 @@ export default function Profile() {
             title="Developer"
             type="Full-time"
           />
-        </div>
+        </RevealOnceVisible>
       </section>
 
       <section className="flex w-full flex-col items-center gap-4 p-10">
-        <Chip>Clients</Chip>
-        <p className="text-center text-4xl font-medium">
-          {"Who I've worked with"}
-        </p>
-        <div className="grid w-full grid-cols-2 gap-x-0 gap-y-5 p-5 text-xl font-medium md:grid-cols-4">
+        <RevealOnceVisible>
+          <Chip>Clients</Chip>
+        </RevealOnceVisible>
+        <RevealOnceVisible transition={{ delay: 0.25 }}>
+          <p className="text-center text-4xl font-medium">
+            {"Who I've worked with"}
+          </p>
+        </RevealOnceVisible>
+
+        <RevealOnceVisible className="grid w-full grid-cols-2 gap-x-0 gap-y-5 p-5 text-xl font-medium md:grid-cols-4">
           <ClientListItem>Alice</ClientListItem>
           <ClientListItem>Bob</ClientListItem>
           <ClientListItem>Cindy</ClientListItem>
@@ -121,7 +147,7 @@ export default function Profile() {
           <ClientListItem>Faruk</ClientListItem>
           <ClientListItem>Guanglei</ClientListItem>
           <ClientListItem>Heidi</ClientListItem>
-        </div>
+        </RevealOnceVisible>
       </section>
 
       <ContactSection />
