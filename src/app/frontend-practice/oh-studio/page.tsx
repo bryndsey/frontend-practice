@@ -7,9 +7,9 @@ import RevealOnceVisible from "./components/RevealOnceVisible";
 export default function Home() {
   return (
     <>
-      <header className="flex min-h-[379px] flex-col items-center justify-evenly p-5 md:p-10">
+      <header className="flex min-h-[379px] flex-col items-center justify-evenly p-5 md:p-10 lg:min-h-[475px] lg:p-16">
         <RevealOnceVisible>
-          <h1 className="max-w-xl break-words text-center text-5xl font-medium leading-tight">
+          <h1 className="max-w-xl break-words text-center text-5xl font-medium leading-tight lg:text-6xl lg:leading-snug">
             A web and mobile developer working with clients globally
           </h1>
         </RevealOnceVisible>
@@ -32,7 +32,7 @@ export default function Home() {
       </header>
 
       <RevealOnceVisible transition={{ delay: 0.5 }} className="w-full">
-        <section className="grid w-full grid-cols-1 gap-x-4 gap-y-10 p-5 md:grid-cols-2 md:p-10">
+        <section className="grid w-full grid-cols-1 gap-x-4 gap-y-6 p-5 md:grid-cols-2 md:p-10">
           <ProjectGridItem text="Portfolio" />
           <ProjectGridItem text="Creative Developer" />
           <ProjectGridItem text="SongSpark" />
@@ -41,7 +41,7 @@ export default function Home() {
 
       <RevealOnceVisible
         transition={{ delay: 0.75 }}
-        className="fixed bottom-10"
+        className="fixed bottom-8"
       >
         <Link
           href="/"
