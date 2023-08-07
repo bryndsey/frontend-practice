@@ -39,16 +39,19 @@ export default function Home() {
         </section>
       </RevealOnceVisible>
 
-      <Reveal transition={{ delay: 0.75 }} className="fixed bottom-0">
+      <ContactSection />
+
+      <Reveal
+        transition={{ delay: 0.75 }}
+        className="fixed bottom-0 left-0 right-0 flex justify-center"
+      >
         <Link
           href="/"
-          className="fixed bottom-8 mx-auto rounded-full bg-black px-6 py-3 text-sm text-white"
+          className="fixed bottom-8 rounded-full bg-black px-6 py-3 text-sm text-white"
         >
           Back
         </Link>
       </Reveal>
-
-      <ContactSection />
     </>
   );
 }
