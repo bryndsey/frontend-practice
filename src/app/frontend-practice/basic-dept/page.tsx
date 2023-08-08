@@ -15,7 +15,7 @@ function LinkButton({
 function EngagementItem() {
   return (
     <li className="w-[75vw] flex-shrink-0 sm:w-[40vw] md:w-[30vw]">
-      <div className="h-10 w-10 rounded-full bg-slate-800"></div>
+      <div className="h-10 w-10 rounded-full bg-stone-800"></div>
       <h3 className="relative mt-8 pt-12 font-bold before:absolute before:top-0 before:block before:h-[2px] before:w-5 before:bg-slate-800">
         CLIENT NAME
       </h3>
