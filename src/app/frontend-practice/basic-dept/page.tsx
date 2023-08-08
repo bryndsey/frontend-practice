@@ -3,15 +3,13 @@ import { FeaturedNews } from "./FeaturedNews";
 import { Footer } from "./Footer";
 import { LinkButton } from "./components/LinkButton";
 import { SmoothScroll } from "./SmoothScroll";
+import { Header } from "./Header";
 
 export default function Page() {
   return (
     <SmoothScroll>
       <div className="bg-neutral-100 text-stone-800">
-        <header className="fixed left-0 right-0 top-0 flex flex-row justify-between px-14 py-10">
-          <span className="font-extrabold">{"BRYAN/LINZ®"}</span>
-          <button>{"MENU"}</button>
-        </header>
+        <Header />
 
         <main>
           <section className="h-screen w-full bg-green-500"></section>
