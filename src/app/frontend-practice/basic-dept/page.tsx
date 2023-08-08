@@ -66,18 +66,7 @@ export default function Page() {
           <figure className="h-[1px] bg-slate-800" />
         </div>
 
-        <section className="overflow-visible p-11">
-          <h2>FEATURED ENGAGMENTS</h2>
-
-          <ul className="relative -inset-x-11 flex w-screen flex-row gap-4 overflow-x-auto px-11 pt-16">
-            <EngagementItem />
-            <EngagementItem />
-            <EngagementItem />
-            <EngagementItem />
-            <EngagementItem />
-            <EngagementItem />
-          </ul>
-        </section>
+        <FeaturedEngagments />
 
         <section className="flex flex-col-reverse gap-2 p-10 sm:grid sm:grid-cols-2">
           {/* TODO: Make this bit sticky once I have more content for scrolling below */}
@@ -89,37 +78,60 @@ export default function Page() {
           <div className="aspect-[3/4] w-full bg-purple-400"></div>
         </section>
 
-        <section className="p-10">
-          <div className="flex flex-row justify-between">
-            <h2>FEATURED NEWS</h2>
-            <LinkButton>VIEW ALL</LinkButton>
-          </div>
-
-          <ul className="mt-8 flex flex-col gap-5 sm:gap-10">
-            <li>
-              <NewsPreviewItem />
-            </li>
-            <li>
-              <NewsPreviewItem />
-            </li>
-            <li>
-              <NewsPreviewItem />
-            </li>
-            <li>
-              <NewsPreviewItem />
-            </li>
-            <li>
-              <NewsPreviewItem />
-            </li>
-            <li>
-              <NewsPreviewItem />
-            </li>
-          </ul>
-        </section>
+        <FeaturedNews />
       </main>
 
       <Footer />
     </div>
+  );
+}
+
+function FeaturedEngagments() {
+  return (
+    <section className="overflow-visible p-11">
+      <h2>FEATURED ENGAGMENTS</h2>
+
+      <ul className="relative -inset-x-11 flex w-screen flex-row gap-4 overflow-x-auto px-11 pt-16">
+        <EngagementItem />
+        <EngagementItem />
+        <EngagementItem />
+        <EngagementItem />
+        <EngagementItem />
+        <EngagementItem />
+      </ul>
+    </section>
+  );
+}
+
+function FeaturedNews() {
+  return (
+    <section className="p-10">
+      <div className="flex flex-row justify-between">
+        <h2>FEATURED NEWS</h2>
+        <LinkButton>VIEW ALL</LinkButton>
+      </div>
+
+      <ul className="mt-8 flex flex-col gap-5 sm:gap-10">
+        <li>
+          <NewsPreviewItem />
+        </li>
+        <li>
+          <NewsPreviewItem />
+        </li>
+        <li>
+          <NewsPreviewItem />
+        </li>
+        <li>
+          <NewsPreviewItem />
+        </li>
+        <li>
+          <NewsPreviewItem />
+        </li>
+        <li>
+          <NewsPreviewItem />
+        </li>
+      </ul>
+    </section>
   );
 }
 
