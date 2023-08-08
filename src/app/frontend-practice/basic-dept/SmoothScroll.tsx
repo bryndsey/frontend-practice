@@ -12,6 +12,7 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
 export type SmoothScrollData = {
   velocity: number;
   progress: number;
+  animatedScroll: number;
 };
 
 export function useSmoothScroll(
