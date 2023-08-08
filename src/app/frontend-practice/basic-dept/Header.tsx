@@ -23,7 +23,6 @@ export function Header() {
   return (
     <header
       ref={containerRef}
-      // style={{ transform: `translateY(-${offsetPercent}%)` }}
       className={
         "fixed left-0 right-0 top-0 flex flex-row justify-between px-14 py-10"
       }
