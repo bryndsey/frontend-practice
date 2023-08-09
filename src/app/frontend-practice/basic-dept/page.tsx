@@ -11,7 +11,7 @@ export default function Page() {
       <div className="bg-neutral-100 text-stone-800">
         <Header />
 
-        <main>
+        <main className="mb-12 sm:mb-24">
           <section className="h-screen w-full bg-green-500"></section>
 
           <section className="grid grid-cols-1 gap-8 p-16 xl:grid-cols-2">
