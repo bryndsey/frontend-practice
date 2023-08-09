@@ -1,38 +1,38 @@
 export function Footer() {
   return (
     <footer className="bg-stone-800 text-neutral-100">
-      <div className="grid grid-cols-1 gap-3 p-10 xl:grid-cols-2">
-        <h3>B/L®</h3>
-        <p>
+      <div className="grid grid-cols-1 gap-3 p-10 text-sm xl:grid-cols-2">
+        <h3 className="text-lg font-extrabold">B/L®</h3>
+        <p className="text-xl">
           {"I collaborate with ambitious brands and people. Let's build. "}
           <a href="#">foo@bar.baz</a>
         </p>
 
-        <div>
-          <h4>STAY IN THE KNOW</h4>
+        <div className="mt-12">
+          <h4>● STAY IN THE KNOW</h4>
           <input></input>
         </div>
 
-        <div className="grid grid-cols-1 gap-3 xl:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-12 xl:grid-cols-3">
           <div>
-            {"SOCIAL"}
-            <ul>
+            <h4>{"● SOCIAL"}</h4>
+            <ul className="mt-6">
               <li>Github</li>
               <li>LinkedIn</li>
               <li>Twitter</li>
             </ul>
           </div>
           <div>
-            {"INITIATIVES"}
-            <ul>
+            <h4>{"● INITIATIVES"}</h4>
+            <ul className="mt-6">
               <li>Thing 1</li>
               <li>Thing 2</li>
               <li>Thing 3</li>
             </ul>
           </div>
           <div>
-            {"OFFICES"}
-            <ul>
+            <h4>{"● OFFICES"}</h4>
+            <ul className="mt-6">
               <li>Spring Hill - TN</li>
               <li>{"It's just the one"}</li>
               <li>{"Seriously, that's all I have"}</li>
