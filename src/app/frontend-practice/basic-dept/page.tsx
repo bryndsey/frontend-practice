@@ -52,9 +52,9 @@ export default function Page() {
 
           <FeaturedEngagments />
 
-          <section className="flex flex-col-reverse gap-2 p-10 sm:grid sm:grid-cols-2">
+          <section className="flex flex-col-reverse items-start gap-2 p-10 sm:grid sm:grid-cols-2">
             {/* TODO: Make this bit sticky once I have more content for scrolling below */}
-            <div className="flex flex-col items-start gap-6">
+            <div className="sticky top-28 flex flex-col items-start gap-6">
               <q className="text-6xl font-bold">SOME TEXT HERE</q>
               <p>MORE CONTENT</p>
               <LinkButton>ABOUT US</LinkButton>
