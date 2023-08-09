@@ -5,6 +5,18 @@ import { LinkButton } from "./components/LinkButton";
 import { SmoothScroll } from "./SmoothScroll";
 import { Header } from "./Header";
 
+function FeaturedProjectItem() {
+  return (
+    <a href="#" className="w-[75vw] sm:w-[40vw]">
+      <div className="aspect-[3/4] w-full bg-blue-400"></div>
+      <h3 className="pt-2 text-lg font-bold">PROJECT NAME</h3>
+      <p className="max-w-[40%] pt-2 text-xs sm:max-w-[60%]">
+        SHORT DESCRIPTION OF THE PROJECT
+      </p>
+    </a>
+  );
+}
+
 export default function Page() {
   return (
     <SmoothScroll>
@@ -23,9 +35,15 @@ export default function Page() {
           </section>
 
           <ul className="flex flex-row gap-4 overflow-x-scroll p-8">
-            <li className="aspect-[3/4] w-[75vw] flex-shrink-0 bg-blue-400 sm:w-[40vw]"></li>
-            <li className="aspect-[3/4] w-[75vw] flex-shrink-0 bg-red-400 sm:w-[40vw]"></li>
-            <li className="aspect-[3/4] w-[75vw] flex-shrink-0 bg-yellow-400 sm:w-[40vw]"></li>
+            <li className="w-[75vw] flex-shrink-0 sm:w-[40vw]">
+              <FeaturedProjectItem />
+            </li>
+            <li className="w-[75vw] flex-shrink-0 sm:w-[40vw]">
+              <FeaturedProjectItem />
+            </li>
+            <li className="w-[75vw] flex-shrink-0 sm:w-[40vw]">
+              <FeaturedProjectItem />
+            </li>
           </ul>
 
           <div className="p-11">
