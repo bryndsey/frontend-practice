@@ -28,10 +28,16 @@ export default function Page() {
 
           <section className="grid grid-cols-1 gap-8 p-16 xl:grid-cols-2">
             <div className="flex w-1/2 flex-col items-start gap-6">
-              <p>{"BRYAN/LINZ® is a person building things."}</p>
+              <p className="text-2xl">
+                {
+                  "BRYAN/LINZ® is a frontend developer building products and experiences that turn cultural values into company values."
+                }
+              </p>
               <LinkButton>SEE THE WORK</LinkButton>
             </div>
-            <p className="text-end text-9xl font-extrabold">B/L®</p>
+            <p className="text-end text-[16rem] font-extrabold leading-none">
+              B/L®
+            </p>
           </section>
 
           <ul className="flex flex-row gap-4 overflow-x-scroll p-8">
