@@ -45,9 +45,20 @@ export function HeroSection() {
         className="pointer-events-none absolute"
       >
         <div
-          className={`h-24 w-24 rounded-full bg-neutral-100`}
+          className={`grid h-32 w-32 rounded-full bg-neutral-100`}
           ref={customCursorRef}
-        ></div>
+        >
+          <span className="m-auto place-items-center text-center text-sm font-bold">
+            {"WATCH"}
+            <br />
+            {"REEL"}
+          </span>
+        </div>
+        <p className="m-auto pt-2 text-center text-xs font-bold text-neutral-100">
+          {"BRYAN/LINZ®"}
+          <br />
+          {"2023-?"}
+        </p>
       </motion.div>
     </section>
   );
