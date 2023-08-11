@@ -4,6 +4,7 @@ import { Footer } from "./Footer";
 import { LinkButton } from "./components/LinkButton";
 import { SmoothScroll } from "./SmoothScroll";
 import { Header } from "./Header";
+import { HeroSection } from "./HeroSection";
 
 function FeaturedProjectItem() {
   return (
@@ -24,7 +25,7 @@ export default function Page() {
         <Header />
 
         <main className="mb-12 sm:mb-24">
-          <section className="h-screen w-full bg-green-500"></section>
+          <HeroSection />
 
           <section className="grid grid-cols-1 gap-8 p-16 xl:grid-cols-2">
             <div className="flex w-1/2 flex-col items-start gap-6">
