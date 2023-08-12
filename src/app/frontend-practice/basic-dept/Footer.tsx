@@ -1,10 +1,10 @@
 export function Footer() {
   return (
     <footer className="bg-stone-800 text-neutral-100">
-      <div className="grid grid-cols-1 gap-3 p-10 text-sm xl:grid-cols-2">
-        <h3 className="text-lg font-extrabold">B/L®</h3>
-        <p className="text-xl">
-          {"I collaborate with ambitious brands and people. Let's build. "}
+      <div className="grid grid-cols-1 gap-3 p-10 text-sm xl:mr-8 xl:grid-cols-2 xl:gap-x-12 xl:gap-y-16 xl:px-20 xl:py-28 xl:text-base">
+        <h3 className="text-lg font-extrabold xl:text-2xl">B/L®</h3>
+        <p className="max-w-[80%] text-xl xl:text-3xl">
+          {"We collaborate with ambitious brands and people. Let's build. "}
           <a href="#">foo@bar.baz</a>
         </p>
 
@@ -35,7 +35,7 @@ export function Footer() {
             <ul className="mt-6">
               <li>Spring Hill - TN</li>
               <li>{"It's just the one"}</li>
-              <li>{"Seriously, that's all I have"}</li>
+              <li>{"Seriously, that's it"}</li>
             </ul>
           </div>
         </div>
