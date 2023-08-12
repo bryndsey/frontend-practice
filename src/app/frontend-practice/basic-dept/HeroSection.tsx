@@ -34,7 +34,7 @@ export function HeroSection() {
     cursorY.set(cursorHitboxRef.current.clientHeight / 2);
 
     cursorOpacity.start(1);
-  }, []);
+  }, [cursorX, cursorY, cursorOpacity]);
 
   useResizeObserver(cursorHitboxRef, () => {
     cursorX.set(cursorHitboxRef.current.clientWidth / 2);
