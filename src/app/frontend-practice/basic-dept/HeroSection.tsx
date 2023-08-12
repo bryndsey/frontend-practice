@@ -9,14 +9,14 @@ export function HeroSection() {
   const customCursorContainerRef = useRef<HTMLDivElement>(null!);
   const customCursorRef = useRef<HTMLDivElement>(null!);
 
-  const cursorSpringX = useSpringValue(0, {
+  const cursorX = useSpringValue(0, {
     config: {
       friction: 15,
       mass: 0.15,
       tension: 200,
     },
   });
-  const cursorSpringY = useSpringValue(0, {
+  const cursorY = useSpringValue(0, {
     config: {
       friction: 15,
       mass: 0.15,
@@ -31,11 +31,11 @@ export function HeroSection() {
   });
 
   useEffect(() => {
-    cursorSpringX.set(
+    cursorX.set(
       cursorHitboxRef.current.clientWidth / 2 -
         customCursorRef.current.clientWidth / 2,
     );
-    cursorSpringY.set(
+    cursorY.set(
       cursorHitboxRef.current.clientHeight / 2 -
         customCursorRef.current.clientHeight / 2,
     );
@@ -44,11 +44,11 @@ export function HeroSection() {
   }, []);
 
   useResizeObserver(cursorHitboxRef, () => {
-    cursorSpringX.set(
+    cursorX.set(
       cursorHitboxRef.current.clientWidth / 2 -
         customCursorRef.current.clientWidth / 2,
     );
-    cursorSpringY.set(
+    cursorY.set(
       cursorHitboxRef.current.clientHeight / 2 -
         customCursorRef.current.clientHeight / 2,
     );
@@ -59,19 +59,15 @@ export function HeroSection() {
       className="relative h-screen w-full cursor-none bg-green-500"
       onPointerMove={(e) => {
         const position = { x: e.pageX, y: e.pageY };
-        cursorSpringX.start(
-          position.x - customCursorRef.current.clientWidth / 2,
-        );
-        cursorSpringY.start(
-          position.y - customCursorRef.current.clientHeight / 2,
-        );
+        cursorX.start(position.x - customCursorRef.current.clientWidth / 2);
+        cursorY.start(position.y - customCursorRef.current.clientHeight / 2);
       }}
       onPointerLeave={(e) => {
-        cursorSpringX.start(
+        cursorX.start(
           e.currentTarget.clientWidth / 2 -
             customCursorRef.current.clientWidth / 2,
         );
-        cursorSpringY.start(
+        cursorY.start(
           e.currentTarget.clientHeight / 2 -
             customCursorRef.current.clientHeight / 2,
         );
@@ -80,7 +76,7 @@ export function HeroSection() {
     >
       <animated.div
         ref={customCursorContainerRef}
-        style={{ x: cursorSpringX, y: cursorSpringY, opacity: cursorOpacity }}
+        style={{ x: cursorX, y: cursorY, opacity: cursorOpacity }}
         className="pointer-events-none absolute"
       >
         <div
