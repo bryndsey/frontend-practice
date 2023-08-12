@@ -1,47 +1,86 @@
 "use client";
 
-import { motion, useSpring } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import useResizeObserver from "@react-hook/resize-observer";
+import { animated, useSpringValue } from "@react-spring/web";
 
 export function HeroSection() {
+  const cursorHitboxRef = useRef<HTMLDivElement>(null!);
   const customCursorContainerRef = useRef<HTMLDivElement>(null!);
   const customCursorRef = useRef<HTMLDivElement>(null!);
 
-  const cursorSpringX = useSpring(0, {
-    damping: 15,
-    mass: 0.15,
-    stiffness: 200,
+  const cursorSpringX = useSpringValue(0, {
+    config: {
+      friction: 15,
+      mass: 0.15,
+      tension: 200,
+    },
   });
-  const cursorSpringY = useSpring(0, {
-    damping: 15,
-    mass: 0.15,
-    stiffness: 200,
+  const cursorSpringY = useSpringValue(0, {
+    config: {
+      friction: 15,
+      mass: 0.15,
+      tension: 200,
+    },
+  });
+
+  const cursorOpacity = useSpringValue(0, {
+    config: {
+      duration: 200,
+    },
+  });
+
+  useEffect(() => {
+    cursorSpringX.set(
+      cursorHitboxRef.current.clientWidth / 2 -
+        customCursorRef.current.clientWidth / 2,
+    );
+    cursorSpringY.set(
+      cursorHitboxRef.current.clientHeight / 2 -
+        customCursorRef.current.clientHeight / 2,
+    );
+
+    cursorOpacity.start(1);
+  }, []);
+
+  useResizeObserver(cursorHitboxRef, () => {
+    cursorSpringX.set(
+      cursorHitboxRef.current.clientWidth / 2 -
+        customCursorRef.current.clientWidth / 2,
+    );
+    cursorSpringY.set(
+      cursorHitboxRef.current.clientHeight / 2 -
+        customCursorRef.current.clientHeight / 2,
+    );
   });
 
   return (
     <section
-      className="relative h-screen w-full bg-green-500"
+      className="relative h-screen w-full cursor-none bg-green-500"
       onPointerMove={(e) => {
         const position = { x: e.pageX, y: e.pageY };
-        cursorSpringX.set(position.x - customCursorRef.current.clientWidth / 2);
-        cursorSpringY.set(
+        cursorSpringX.start(
+          position.x - customCursorRef.current.clientWidth / 2,
+        );
+        cursorSpringY.start(
           position.y - customCursorRef.current.clientHeight / 2,
         );
       }}
       onPointerLeave={(e) => {
-        cursorSpringX.set(
+        cursorSpringX.start(
           e.currentTarget.clientWidth / 2 -
             customCursorRef.current.clientWidth / 2,
         );
-        cursorSpringY.set(
+        cursorSpringY.start(
           e.currentTarget.clientHeight / 2 -
             customCursorRef.current.clientHeight / 2,
         );
       }}
+      ref={cursorHitboxRef}
     >
-      <motion.div
+      <animated.div
         ref={customCursorContainerRef}
-        style={{ x: cursorSpringX, y: cursorSpringY }}
+        style={{ x: cursorSpringX, y: cursorSpringY, opacity: cursorOpacity }}
         className="pointer-events-none absolute"
       >
         <div
@@ -59,7 +98,7 @@ export function HeroSection() {
           <br />
           {"2023-?"}
         </p>
-      </motion.div>
+      </animated.div>
     </section>
   );
 }

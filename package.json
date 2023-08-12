@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-hook/resize-observer": "^1.2.6",
+    "@react-spring/web": "^9.7.3",
     "@studio-freight/react-lenis": "^0.0.26",
     "@types/node": "20.4.7",
     "@types/react": "18.2.18",
