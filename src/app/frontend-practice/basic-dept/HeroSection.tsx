@@ -58,9 +58,8 @@ export function HeroSection() {
     <section
       className="relative h-screen w-full cursor-none bg-green-500"
       onPointerMove={(e) => {
-        const position = { x: e.pageX, y: e.pageY };
-        cursorX.start(position.x - customCursorRef.current.clientWidth / 2);
-        cursorY.start(position.y - customCursorRef.current.clientHeight / 2);
+        cursorX.start(e.pageX - customCursorRef.current.clientWidth / 2);
+        cursorY.start(e.pageY - customCursorRef.current.clientHeight / 2);
       }}
       onPointerLeave={(e) => {
         cursorX.start(
