@@ -1,6 +1,6 @@
 export function FeaturedEngagments() {
   return (
-    <section className="overflow-visible p-11">
+    <section className="overflow-visible p-11 xl:p-20">
       <h2>FEATURED ENGAGMENTS</h2>
 
       <ul className="relative -inset-x-11 flex w-screen flex-row gap-4 overflow-x-auto px-11 pt-16">

@@ -27,9 +27,9 @@ export default function Page() {
         <main className="mb-12 sm:mb-24">
           <HeroSection />
 
-          <section className="grid grid-cols-1 gap-8 p-16 xl:grid-cols-2">
-            <div className="flex w-1/2 flex-col items-start gap-6">
-              <p className="text-2xl">
+          <section className="grid grid-cols-1 gap-8 p-16 xl:grid-cols-2 xl:p-20">
+            <div className="flex w-1/2 flex-col items-start gap-6 [text-wrap:balance] xl:w-full">
+              <p className="text-2xl xl:text-4xl">
                 {
                   "BRYAN/LINZ® is a frontend developer building products and experiences that turn cultural values into company values."
                 }
@@ -41,29 +41,33 @@ export default function Page() {
             </p>
           </section>
 
-          <ul className="flex flex-row gap-4 overflow-x-scroll p-8">
-            <li className="w-[75vw] flex-shrink-0 sm:w-[40vw]">
+          <ul className="flex flex-row gap-4 overflow-x-scroll p-8 xl:p-20">
+            <li className="w-[75vw] flex-shrink-0 sm:w-[40vw] xl:w-[29vw]">
               <FeaturedProjectItem />
             </li>
-            <li className="w-[75vw] flex-shrink-0 sm:w-[40vw]">
+            <li className="w-[75vw] flex-shrink-0 sm:w-[40vw]  xl:w-[29vw]">
               <FeaturedProjectItem />
             </li>
-            <li className="w-[75vw] flex-shrink-0 sm:w-[40vw]">
+            <li className="w-[75vw] flex-shrink-0 sm:w-[40vw] xl:w-[29vw]">
               <FeaturedProjectItem />
             </li>
           </ul>
 
-          <div className="p-11">
+          <div className="p-11 xl:p-20">
             <figure className="h-[1px] bg-slate-800" />
           </div>
 
           <FeaturedEngagments />
 
-          <section className="flex flex-col-reverse items-start gap-2 p-10 sm:grid sm:grid-cols-2">
+          <section className="flex flex-col-reverse items-start gap-2 p-10 sm:grid sm:grid-cols-2 xl:gap-16 xl:p-20">
             {/* TODO: Make this bit sticky once I have more content for scrolling below */}
             <div className="sticky top-28 flex flex-col items-start gap-6">
-              <q className="text-6xl font-bold">SOME TEXT HERE</q>
-              <p>MORE CONTENT</p>
+              <q className="text-6xl font-bold xl:text-7xl">
+                BRYAN/LINZ® HELPS BRANDS ● CONNECT W/ CULTURE
+              </q>
+              <p>
+                NOBODY <b>SAID THAT</b>
+              </p>
               <LinkButton>ABOUT US</LinkButton>
             </div>
             <div className="aspect-[3/4] w-full bg-purple-400"></div>
