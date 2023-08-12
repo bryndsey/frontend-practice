@@ -43,7 +43,7 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative h-screen w-full bg-green-500"
+      className="relative h-screen w-full cursor-none bg-green-500"
       onPointerMove={(e) => {
         cursorX.start(e.pageX);
         cursorY.start(e.pageY);
