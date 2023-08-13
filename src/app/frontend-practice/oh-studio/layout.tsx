@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import NavBar from "./NavBar";
 import { Metadata } from "next";
+import "./main.css";
 
 const font = localFont({
   src: [

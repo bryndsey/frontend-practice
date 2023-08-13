@@ -5,6 +5,7 @@ import { LinkButton } from "./components/LinkButton";
 import { SmoothScroll } from "./SmoothScroll";
 import { Header } from "./Header";
 import { HeroSection } from "./HeroSection";
+import "./main.css";
 
 function FeaturedProjectItem() {
   return (
@@ -23,7 +24,7 @@ function FeaturedProjectItem() {
 export default function Page() {
   return (
     <SmoothScroll>
-      <div className="bg-neutral-100 text-stone-800">
+      <div className="text-content bg-backdrop">
         <Header />
 
         <main className="mb-12 md:mb-24">
