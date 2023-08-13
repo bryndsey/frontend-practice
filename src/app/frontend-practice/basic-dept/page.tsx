@@ -8,10 +8,10 @@ import { HeroSection } from "./HeroSection";
 
 function FeaturedProjectItem() {
   return (
-    <a href="#" className="w-[75vw] sm:w-[40vw]">
+    <a href="#" className="w-[75vw] md:w-[40vw]">
       <div className="aspect-[3/4] w-full bg-blue-400"></div>
       <h3 className="pt-2 text-lg font-bold">PROJECT NAME</h3>
-      <p className="max-w-[40%] pt-2 text-xs sm:max-w-[60%]">
+      <p className="max-w-[40%] pt-2 text-xs md:max-w-[60%]">
         SHORT DESCRIPTION OF THE PROJECT
       </p>
     </a>
@@ -24,7 +24,7 @@ export default function Page() {
       <div className="bg-neutral-100 text-stone-800">
         <Header />
 
-        <main className="mb-12 sm:mb-24">
+        <main className="mb-12 md:mb-24">
           <HeroSection />
 
           <section className="grid grid-cols-1 gap-8 p-16 xl:grid-cols-2 xl:p-20">
@@ -42,13 +42,13 @@ export default function Page() {
           </section>
 
           <ul className="no-scrollbar flex flex-row gap-4 overflow-x-scroll p-8 xl:p-20">
-            <li className="w-[75vw] flex-shrink-0 sm:w-[40vw] xl:w-[29vw]">
+            <li className="w-[75vw] flex-shrink-0 md:w-[40vw] xl:w-[29vw]">
               <FeaturedProjectItem />
             </li>
-            <li className="w-[75vw] flex-shrink-0 sm:w-[40vw]  xl:w-[29vw]">
+            <li className="w-[75vw] flex-shrink-0 md:w-[40vw]  xl:w-[29vw]">
               <FeaturedProjectItem />
             </li>
-            <li className="w-[75vw] flex-shrink-0 sm:w-[40vw] xl:w-[29vw]">
+            <li className="w-[75vw] flex-shrink-0 md:w-[40vw] xl:w-[29vw]">
               <FeaturedProjectItem />
             </li>
           </ul>
@@ -59,10 +59,10 @@ export default function Page() {
 
           <FeaturedEngagments />
 
-          <section className="flex flex-col-reverse items-start gap-2 p-10 sm:grid sm:grid-cols-2 xl:gap-16 xl:p-20">
+          <section className="flex flex-col-reverse items-start gap-2 p-10 md:grid md:grid-cols-2 xl:gap-16 xl:p-20">
             {/* TODO: Make this bit sticky once I have more content for scrolling below */}
             <div className="sticky top-28 flex flex-col items-start gap-6">
-              <q className="text-6xl font-bold xl:text-7xl">
+              <q className="text-5xl font-bold xl:text-7xl">
                 BRYAN/LINZ® HELPS BRANDS ● CONNECT W/ CULTURE
               </q>
               <p>
