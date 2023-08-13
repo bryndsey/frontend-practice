@@ -72,7 +72,7 @@ function CursorContent() {
   return (
     <div className="-translate-x-1/2 -translate-y-16">
       <div
-        className={`grid h-32 w-32 rounded-full bg-neutral-100`}
+        className={`bg-backdrop grid h-32 w-32 rounded-full`}
         ref={customCursorRef}
       >
         <span className="m-auto place-items-center text-center text-sm font-bold">
@@ -81,7 +81,7 @@ function CursorContent() {
           {"REEL"}
         </span>
       </div>
-      <p className="m-auto pt-2 text-center text-xs font-bold text-neutral-100">
+      <p className="text-backdrop m-auto pt-2 text-center text-xs font-bold">
         {"BRYAN/LINZ®"}
         <br />
         {"2023-?"}

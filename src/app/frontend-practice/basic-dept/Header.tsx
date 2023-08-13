@@ -21,13 +21,13 @@ export function Header() {
 
     // TODO: Maybe figure out a way to abstract this threshold?
     if (data.animatedScroll > window.innerHeight * 0.75) {
-      // TODO: Extract colors
-      containerRef.current.style.background = "rgba(245, 245, 245, 1.0)";
-      containerRef.current.style.color = "rgb(41, 37, 36)";
+      containerRef.current.style.background =
+        "rgb(var(--color-backdrop) / 1.0)";
+      containerRef.current.style.color = "rgb(var(--color-content))";
     } else {
-      // TODO: Extract colors
-      containerRef.current.style.backgroundColor = "rgba(245, 245, 245, 0.0)";
-      containerRef.current.style.color = "rgb(245, 245, 245)";
+      containerRef.current.style.background =
+        "rgb(var(--color-backdrop) / 0.0)";
+      containerRef.current.style.color = "rgb(var(--color-backdrop))";
     }
   });
 
@@ -35,7 +35,7 @@ export function Header() {
     <header
       ref={containerRef}
       className={
-        "fixed left-0 right-0 top-0 z-50 flex flex-row justify-between bg-neutral-100 px-10 py-10 transition-colors duration-300"
+        "bg-backdrop fixed left-0 right-0 top-0 z-50 flex flex-row justify-between px-10 py-10 transition-colors duration-300"
       }
     >
       <span className="font-extrabold">{"BRYAN/LINZ®"}</span>

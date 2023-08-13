@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        backdrop: "rgb(var(--color-background) / <alpha-value>)",
+        backdrop: "rgb(var(--color-backdrop) / <alpha-value>)",
         content: "rgb(var(--color-content) / <alpha-value>)",
       },
     },

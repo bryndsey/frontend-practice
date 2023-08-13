@@ -3,7 +3,7 @@ function EmailInput() {
     <form>
       <div className="flex flex-row border-b">
         <input
-          className="flex-1 border-none bg-transparent px-0 py-4 text-sm placeholder:text-sm placeholder:text-neutral-100 focus:ring-0"
+          className="placeholder:text-backdrop flex-1 border-none bg-transparent px-0 py-4 text-sm placeholder:text-sm focus:ring-0"
           type="email"
           name="email"
           placeholder="Email address"
@@ -18,7 +18,7 @@ function EmailInput() {
 
 export function Footer() {
   return (
-    <footer className="bg-stone-800 text-neutral-100">
+    <footer className="bg-content text-backdrop">
       <div className="grid grid-cols-1 gap-3 p-10 text-sm xl:mr-8 xl:grid-cols-2 xl:gap-x-12 xl:gap-y-16 xl:px-20 xl:py-28 xl:text-base">
         <h3 className="text-lg font-extrabold xl:text-2xl">B/L®</h3>
         <p className="max-w-[80%] text-xl xl:text-3xl">

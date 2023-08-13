@@ -36,7 +36,7 @@ function NewsPreviewItem() {
   return (
     <a
       href="#"
-      className="group relative flex w-full flex-col gap-4 pt-5 before:absolute before:left-0 before:right-0 before:top-0 before:h-[1px] before:bg-stone-800 md:flex-row"
+      className="before:bg-content group relative flex w-full flex-col gap-4 pt-5 before:absolute before:left-0 before:right-0 before:top-0 before:h-[1px] md:flex-row"
     >
       <div className="aspect-[4/3] w-full bg-orange-800 md:w-1/3"></div>
       <div className="relative flex flex-1 flex-col justify-between gap-8">

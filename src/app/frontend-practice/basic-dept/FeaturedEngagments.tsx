@@ -41,9 +41,9 @@ export function FeaturedEngagments() {
         <EngagementItem />
       </ul>
 
-      <div className="relative mt-24 h-[2px] w-full bg-stone-800 bg-opacity-25">
+      <div className="bg-content relative mt-24 h-[2px] w-full bg-opacity-25">
         <div
-          className="absolute left-0 top-0 h-full bg-stone-800"
+          className="bg-content absolute left-0 top-0 h-full"
           ref={scrollIndicatorRef}
         ></div>
       </div>
@@ -54,7 +54,7 @@ export function FeaturedEngagments() {
 function EngagementItem() {
   return (
     <li className="w-[75vw] flex-shrink-0 md:w-[40vw] lg:w-[30vw]">
-      <div className="h-10 w-10 rounded-full bg-stone-800"></div>
+      <div className="bg-content h-10 w-10 rounded-full"></div>
       <h3 className="relative mt-8 pt-12 font-bold before:absolute before:top-0 before:block before:h-[2px] before:w-5 before:bg-slate-800">
         CLIENT NAME
       </h3>

@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    --color-background: 244 244 244;
+    --color-backdrop: 244 244 244;
     --color-content: 37 36 34;
   }
 }
