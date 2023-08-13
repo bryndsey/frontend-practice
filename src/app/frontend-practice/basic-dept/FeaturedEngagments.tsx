@@ -1,9 +1,38 @@
+"use client";
+
+import useResizeObserver from "@react-hook/resize-observer";
+import { useCallback, useRef } from "react";
+
 export function FeaturedEngagments() {
+  const sectionRef = useRef<HTMLElement>(null!);
+  const contentRef = useRef<HTMLUListElement>(null!);
+  const scrollIndicatorRef = useRef<HTMLDivElement>(null!);
+
+  const updateCustomScrollbar = useCallback(() => {
+    const widthPercent =
+      sectionRef.current.clientWidth / contentRef.current.scrollWidth;
+
+    const offsetPercent =
+      contentRef.current.scrollLeft / sectionRef.current.clientWidth;
+
+    scrollIndicatorRef.current.style.width = `${widthPercent * 100}%`;
+
+    scrollIndicatorRef.current.style.transform = `translateX(${
+      offsetPercent * 100
+    }%)`;
+  }, [sectionRef, contentRef, scrollIndicatorRef]);
+
+  useResizeObserver(sectionRef, updateCustomScrollbar);
+
   return (
-    <section className="overflow-visible p-11 xl:p-20">
+    <section className="overflow-visible p-11 xl:p-20" ref={sectionRef}>
       <h2>FEATURED ENGAGMENTS</h2>
 
-      <ul className="no-scrollbar relative -inset-x-11 flex w-screen flex-row gap-4 overflow-x-auto px-11 pt-16 xl:-inset-x-20">
+      <ul
+        className="no-scrollbar relative -inset-x-11 flex w-screen flex-row gap-4 overflow-x-auto px-11 pt-16 xl:-inset-x-20"
+        ref={contentRef}
+        onScroll={updateCustomScrollbar}
+      >
         <EngagementItem />
         <EngagementItem />
         <EngagementItem />
@@ -11,6 +40,13 @@ export function FeaturedEngagments() {
         <EngagementItem />
         <EngagementItem />
       </ul>
+
+      <div className="relative mt-24 h-[2px] w-full bg-stone-800 bg-opacity-25">
+        <div
+          className="absolute left-0 top-0 h-full bg-stone-800"
+          ref={scrollIndicatorRef}
+        ></div>
+      </div>
     </section>
   );
 }
