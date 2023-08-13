@@ -3,7 +3,7 @@ function EmailInput() {
     <form>
       <div className="flex flex-row border-b">
         <input
-          className="flex-1 bg-transparent py-4 text-sm placeholder:text-sm placeholder:text-neutral-100"
+          className="flex-1 border-none bg-transparent px-0 py-4 text-sm placeholder:text-sm placeholder:text-neutral-100 focus:ring-0"
           type="email"
           name="email"
           placeholder="Email address"
