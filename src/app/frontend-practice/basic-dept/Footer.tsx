@@ -1,3 +1,21 @@
+function EmailInput() {
+  return (
+    <form>
+      <div className="flex flex-row border-b">
+        <input
+          className="flex-1 bg-transparent py-4 text-sm placeholder:text-sm placeholder:text-neutral-100"
+          type="email"
+          name="email"
+          placeholder="Email address"
+        ></input>
+        <button type="submit" className="text-2xl">
+          {"->"}
+        </button>
+      </div>
+    </form>
+  );
+}
+
 export function Footer() {
   return (
     <footer className="bg-stone-800 text-neutral-100">
@@ -10,7 +28,7 @@ export function Footer() {
 
         <div className="mt-12">
           <h4>● STAY IN THE KNOW</h4>
-          <input></input>
+          <EmailInput />
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-12 xl:grid-cols-3">
