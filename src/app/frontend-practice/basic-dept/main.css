@@ -9,6 +9,13 @@
     --color-backdrop: 244 244 244;
     --color-content: 37 36 34;
   }
+
+  [class*="-content"],
+  [class*="-backdrop"] {
+    transition-property: color, background-color, border-color,
+      text-decoration-color, fill, stroke;
+    transition-duration: 250ms;
+  }
 }
 
 @layer utilities {
