@@ -57,7 +57,7 @@ export default function Page() {
           </ul>
 
           <div className="p-11 xl:p-20">
-            <figure className="h-[1px] bg-slate-800" />
+            <figure className="bg-content h-[1px]" />
           </div>
 
           <FeaturedEngagments />
