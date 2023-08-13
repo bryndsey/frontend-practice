@@ -41,7 +41,7 @@ export default function Page() {
             </p>
           </section>
 
-          <ul className="flex flex-row gap-4 overflow-x-scroll p-8 xl:p-20">
+          <ul className="no-scrollbar flex flex-row gap-4 overflow-x-scroll p-8 xl:p-20">
             <li className="w-[75vw] flex-shrink-0 sm:w-[40vw] xl:w-[29vw]">
               <FeaturedProjectItem />
             </li>
