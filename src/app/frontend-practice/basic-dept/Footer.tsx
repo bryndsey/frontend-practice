@@ -23,7 +23,9 @@ export function Footer() {
         <h3 className="text-lg font-extrabold xl:text-2xl">B/L®</h3>
         <p className="max-w-[80%] text-xl xl:text-3xl">
           {"We collaborate with ambitious brands and people. Let's build. "}
-          <a href="#">foo@bar.baz</a>
+          <a href="#" className="underline">
+            biz@bryanlindsey.dev
+          </a>
         </p>
 
         <div className="mt-12 xl:max-w-[85%]">
