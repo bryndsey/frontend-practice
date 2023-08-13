@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { useSmoothScroll } from "./SmoothScroll";
+import Link from "next/link";
 
 export function Header() {
   const offset = useRef(0);
@@ -39,7 +40,7 @@ export function Header() {
       }
     >
       <span className="font-extrabold">{"BRYAN/LINZ®"}</span>
-      <button>{"MENU"}</button>
+      <Link href="/">{"BACK"}</Link>
     </header>
   );
 }
