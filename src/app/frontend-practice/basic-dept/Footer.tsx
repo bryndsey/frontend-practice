@@ -1,7 +1,7 @@
 function EmailInput() {
   return (
     <form>
-      <div className="flex flex-row border-b">
+      <div className="border-b-backdrop flex flex-row border-b">
         <input
           className="placeholder:text-backdrop flex-1 border-none bg-transparent px-0 py-4 text-sm placeholder:text-sm focus:ring-0"
           type="email"
