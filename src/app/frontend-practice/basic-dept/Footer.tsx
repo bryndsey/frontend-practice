@@ -26,7 +26,7 @@ export function Footer() {
           <a href="#">foo@bar.baz</a>
         </p>
 
-        <div className="mt-12">
+        <div className="mt-12 xl:max-w-[85%]">
           <h4>● STAY IN THE KNOW</h4>
           <EmailInput />
         </div>
