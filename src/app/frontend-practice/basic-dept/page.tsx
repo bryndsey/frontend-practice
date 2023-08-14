@@ -7,20 +7,7 @@ import { Header } from "./Header";
 import { HeroSection } from "./HeroSection";
 import "./main.css";
 import { SpotlightSection } from "./SpotlightSection";
-
-function FeaturedProjectItem() {
-  return (
-    <a href="#" className="group w-[75vw] md:w-[40vw]">
-      <div className="aspect-[3/4] w-full bg-blue-400"></div>
-      <h3 className="pt-2 text-lg font-bold group-hover:underline">
-        PROJECT NAME
-      </h3>
-      <p className="max-w-[40%] pt-2 text-xs md:max-w-[60%]">
-        SHORT DESCRIPTION OF THE PROJECT
-      </p>
-    </a>
-  );
-}
+import { FeaturedProjects } from "./FeaturedProjects";
 
 export default function Page() {
   return (
@@ -49,17 +36,7 @@ export default function Page() {
             </figure>
           </section>
 
-          <ul className="no-scrollbar flex flex-row gap-4 overflow-x-scroll p-10 md:p-16 xl:p-20">
-            <li className="w-[75vw] flex-shrink-0 md:w-[40vw] xl:w-[29vw]">
-              <FeaturedProjectItem />
-            </li>
-            <li className="w-[75vw] flex-shrink-0 md:w-[40vw] xl:w-[29vw]">
-              <FeaturedProjectItem />
-            </li>
-            <li className="w-[75vw] flex-shrink-0 md:w-[40vw] xl:w-[29vw]">
-              <FeaturedProjectItem />
-            </li>
-          </ul>
+          <FeaturedProjects />
 
           <div className="p-10 md:p-16 xl:p-20">
             <figure className="bg-content h-[1px]" />
