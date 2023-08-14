@@ -25,7 +25,7 @@ function FeaturedProjectItem() {
 export default function Page() {
   return (
     <SmoothScroll>
-      <div className="text-content bg-backdrop">
+      <div className="text-content bg-backdrop overflow-x-hidden">
         <Header />
 
         <main className="mb-12 md:mb-24">
@@ -40,9 +40,13 @@ export default function Page() {
               </p>
               <LinkButton>SEE THE WORK</LinkButton>
             </div>
-            <p className="text-end text-[16rem] font-extrabold leading-none">
-              B/L®
-            </p>
+            <figure className="w-3/4 place-self-end text-end md:w-1/2 xl:w-full">
+              <svg viewBox="0 0 40 22">
+                <text x="5" y="17" fontWeight="bold" textAnchor="start">
+                  B/L®
+                </text>
+              </svg>
+            </figure>
           </section>
 
           <ul className="no-scrollbar flex flex-row gap-4 overflow-x-scroll p-10 md:p-16 xl:p-20">
