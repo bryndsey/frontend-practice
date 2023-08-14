@@ -25,7 +25,7 @@ function FeaturedProjectItem() {
 export default function Page() {
   return (
     <SmoothScroll>
-      <div className="text-content bg-backdrop overflow-x-hidden">
+      <div className="text-content bg-backdrop overflow-x-clip">
         <Header />
 
         <main className="mb-12 md:mb-24">
