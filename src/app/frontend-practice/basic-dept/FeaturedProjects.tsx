@@ -1,13 +1,13 @@
 export function FeaturedProjects() {
   return (
-    <ul className="no-scrollbar flex flex-row gap-4 overflow-x-scroll p-10 md:p-16 xl:p-20">
-      <li className="w-[75vw] flex-shrink-0 md:w-[40vw] xl:w-[29vw]">
+    <ul className="no-scrollbar flex flex-row gap-4 overflow-x-auto p-10 md:p-16 xl:grid xl:grid-cols-3 xl:p-20">
+      <li className="w-[75vw] flex-shrink-0 md:w-[40vw] xl:w-auto">
         <FeaturedProjectItem />
       </li>
-      <li className="w-[75vw] flex-shrink-0 md:w-[40vw] xl:w-[29vw]">
+      <li className="w-[75vw] flex-shrink-0 md:w-[40vw] xl:w-auto">
         <FeaturedProjectItem />
       </li>
-      <li className="w-[75vw] flex-shrink-0 md:w-[40vw] xl:w-[29vw]">
+      <li className="w-[75vw] flex-shrink-0 md:w-[40vw] xl:w-auto">
         <FeaturedProjectItem />
       </li>
     </ul>
