@@ -19,7 +19,7 @@ function EmailInput() {
 export function Footer() {
   return (
     <footer className="bg-content text-backdrop">
-      <div className="grid grid-cols-1 gap-3 p-10 text-sm xl:mr-8 xl:grid-cols-2 xl:gap-x-12 xl:gap-y-16 xl:px-20 xl:py-28 xl:text-base">
+      <div className="grid grid-cols-1 gap-3 p-10 text-sm md:p-16 xl:mr-8 xl:grid-cols-2 xl:gap-x-12 xl:gap-y-16 xl:px-20 xl:py-28 xl:text-base">
         <h3 className="text-lg font-extrabold xl:text-2xl">B/L®</h3>
         <p className="max-w-[80%] text-xl xl:text-3xl">
           {"We collaborate with ambitious brands and people. Let's build. "}

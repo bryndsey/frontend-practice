@@ -22,7 +22,7 @@ export function SpotlightSection() {
 
   return (
     <section
-      className="flex flex-col-reverse items-start gap-2 p-10 md:grid md:grid-cols-2 xl:gap-16 xl:p-20"
+      className="flex flex-col-reverse items-start gap-2 p-10 md:grid md:grid-cols-2 md:p-16 xl:gap-16 xl:p-20"
       ref={sectionRef}
     >
       <div className="sticky top-28 flex flex-col items-start gap-6">

@@ -31,8 +31,8 @@ export default function Page() {
         <main className="mb-12 md:mb-24">
           <HeroSection />
 
-          <section className="grid grid-cols-1 gap-8 p-16 xl:grid-cols-2 xl:p-20">
-            <div className="flex w-1/2 flex-col items-start gap-6 [text-wrap:balance] xl:w-full">
+          <section className="grid grid-cols-1 gap-8 p-10 md:p-16 xl:grid-cols-2 xl:p-20">
+            <div className="flex w-4/5 flex-col items-start gap-6 [text-wrap:balance] md:w-1/2 xl:w-full">
               <p className="text-2xl xl:text-4xl">
                 {
                   "BRYAN/LINZ® is a frontend developer building products and experiences that turn cultural values into company values."
@@ -45,7 +45,7 @@ export default function Page() {
             </p>
           </section>
 
-          <ul className="no-scrollbar flex flex-row gap-4 overflow-x-scroll p-8 xl:p-20">
+          <ul className="no-scrollbar flex flex-row gap-4 overflow-x-scroll p-10 md:p-16 xl:p-20">
             <li className="w-[75vw] flex-shrink-0 md:w-[40vw] xl:w-[29vw]">
               <FeaturedProjectItem />
             </li>
@@ -57,7 +57,7 @@ export default function Page() {
             </li>
           </ul>
 
-          <div className="p-11 xl:p-20">
+          <div className="p-10 md:p-16 xl:p-20">
             <figure className="bg-content h-[1px]" />
           </div>
 

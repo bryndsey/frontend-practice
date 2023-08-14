@@ -25,11 +25,12 @@ export function FeaturedEngagments() {
   useResizeObserver(sectionRef, updateCustomScrollbar);
 
   return (
-    <section className="overflow-visible p-11 xl:p-20" ref={sectionRef}>
+    <section className="overflow-visible p-10 md:p-16 xl:p-20" ref={sectionRef}>
       <h2>FEATURED ENGAGMENTS</h2>
 
+      {/* TODO: Don't hardcode the margin offset to account for padding - have it be calculated instead */}
       <ul
-        className="no-scrollbar relative -inset-x-11 flex w-screen flex-row gap-4 overflow-x-auto px-11 pt-16 xl:-inset-x-20"
+        className="no-scrollbar relative -mx-10 flex w-screen flex-row gap-4 overflow-x-auto px-10 pt-16 md:-mx-16 md:px-16 xl:-mx-20 xl:px-20"
         ref={contentRef}
         onScroll={updateCustomScrollbar}
       >

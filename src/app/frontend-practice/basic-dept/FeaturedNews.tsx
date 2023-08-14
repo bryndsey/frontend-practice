@@ -2,7 +2,7 @@ import { LinkButton } from "./components/LinkButton";
 
 export function FeaturedNews() {
   return (
-    <section className="p-10 xl:p-20">
+    <section className="p-10 md:p-16 xl:p-20">
       <div className="flex flex-row justify-between">
         <h2>FEATURED NEWS</h2>
         <LinkButton>VIEW ALL</LinkButton>

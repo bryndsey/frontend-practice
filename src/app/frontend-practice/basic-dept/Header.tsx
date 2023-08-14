@@ -36,7 +36,7 @@ export function Header() {
     <header
       ref={containerRef}
       className={
-        "bg-backdrop fixed left-0 right-0 top-0 z-50 flex flex-row justify-between px-10 py-10 transition-colors duration-300"
+        "bg-backdrop fixed left-0 right-0 top-0 z-50 flex flex-row justify-between px-10 py-10 transition-colors duration-300 md:px-16 xl:px-20"
       }
     >
       <span className="font-extrabold">{"BRYAN/LINZ®"}</span>
