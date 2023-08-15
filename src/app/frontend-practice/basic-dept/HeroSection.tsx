@@ -1,66 +1,23 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import useResizeObserver from "@react-hook/resize-observer";
-import { animated, useSpringValue } from "@react-spring/web";
+import { useRef } from "react";
+import CustomCursorArea from "./components/CustomCursorArea";
 
 export function HeroSection() {
-  const cursorHitboxRef = useRef<HTMLDivElement>(null!);
   const customCursorContainerRef = useRef<HTMLDivElement>(null!);
 
-  const cursorX = useSpringValue(0, {
-    config: {
-      friction: 15,
-      mass: 0.15,
-      tension: 200,
-    },
-  });
-  const cursorY = useSpringValue(0, {
-    config: {
-      friction: 15,
-      mass: 0.15,
-      tension: 200,
-    },
-  });
-
-  const cursorOpacity = useSpringValue(0, {
-    config: {
-      duration: 200,
-    },
-  });
-
-  useEffect(() => {
-    cursorX.set(cursorHitboxRef.current.clientWidth / 2);
-    cursorY.set(cursorHitboxRef.current.clientHeight / 2);
-
-    cursorOpacity.start(1);
-  }, [cursorX, cursorY, cursorOpacity]);
-
-  useResizeObserver(cursorHitboxRef, () => {
-    cursorX.set(cursorHitboxRef.current.clientWidth / 2);
-    cursorY.set(cursorHitboxRef.current.clientHeight / 2);
-  });
-
   return (
-    <section
-      className="relative h-screen w-full cursor-none bg-green-500"
-      onPointerMove={(e) => {
-        cursorX.start(e.pageX);
-        cursorY.start(e.pageY);
-      }}
-      onPointerLeave={(e) => {
-        cursorX.start(e.currentTarget.clientWidth / 2);
-        cursorY.start(e.currentTarget.clientHeight / 2);
-      }}
-      ref={cursorHitboxRef}
-    >
-      <animated.div
+    <section className="h-screen w-full cursor-none bg-green-500">
+      <CustomCursorArea
+        calculateRestPosition={() => ({
+          x: customCursorContainerRef.current.clientWidth / 2,
+          y: customCursorContainerRef.current.clientHeight / 2,
+        })}
         ref={customCursorContainerRef}
-        style={{ x: cursorX, y: cursorY, opacity: cursorOpacity }}
-        className="pointer-events-none absolute"
+        className="h-full w-full"
       >
         <CursorContent />
-      </animated.div>
+      </CustomCursorArea>
     </section>
   );
 }
