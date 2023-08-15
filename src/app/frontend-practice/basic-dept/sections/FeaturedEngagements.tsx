@@ -3,7 +3,7 @@
 import useResizeObserver from "@react-hook/resize-observer";
 import { useCallback, useRef } from "react";
 
-export function FeaturedEngagments() {
+export function FeaturedEngagements() {
   const sectionRef = useRef<HTMLElement>(null!);
   const contentRef = useRef<HTMLUListElement>(null!);
   const scrollIndicatorRef = useRef<HTMLDivElement>(null!);
@@ -26,7 +26,7 @@ export function FeaturedEngagments() {
 
   return (
     <section className="overflow-visible p-10 md:p-16 xl:p-20" ref={sectionRef}>
-      <h2 className="text-2xl font-semibold">FEATURED ENGAGMENTS</h2>
+      <h2 className="text-2xl font-semibold">FEATURED ENGAGEMENTS</h2>
 
       {/* TODO: Don't hardcode the margin offset to account for padding - have it be calculated instead */}
       <ul

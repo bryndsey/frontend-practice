@@ -1,4 +1,4 @@
-import { FeaturedEngagments } from "./sections/FeaturedEngagments";
+import { FeaturedEngagements } from "./sections/FeaturedEngagements";
 import { FeaturedNews } from "./sections/FeaturedNews";
 import { Footer } from "./sections/Footer";
 import { SmoothScroll } from "./components/SmoothScroll";
@@ -26,7 +26,7 @@ export default function Page() {
             <figure className="bg-content h-[1px]" />
           </div>
 
-          <FeaturedEngagments />
+          <FeaturedEngagements />
 
           <SpotlightSection />
 
