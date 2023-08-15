@@ -22,7 +22,7 @@ export function Footer() {
       <div className="grid grid-cols-1 gap-3 p-10 text-sm md:p-16 xl:mr-8 xl:grid-cols-2 xl:gap-x-12 xl:gap-y-16 xl:px-20 xl:py-28 xl:text-base">
         <h3 className="text-lg font-extrabold xl:text-2xl">B/L®</h3>
         <p className="max-w-[80%] text-xl xl:text-3xl">
-          {"We collaborate with ambitious brands and people. Let's build. "}
+          {"I collaborate with ambitious brands and people. Let's build. "}
           <a href="#" className="underline">
             biz@bryanlindsey.dev
           </a>
@@ -37,25 +37,67 @@ export function Footer() {
           <div>
             <h4>{"● SOCIAL"}</h4>
             <ul className="mt-6">
-              <li>Github</li>
-              <li>LinkedIn</li>
-              <li>Twitter</li>
+              <li>
+                <a
+                  href="https://github.com/bryndsey"
+                  className="hover:underline"
+                >
+                  Github
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/bryan-c-lindsey/"
+                  className="hover:underline"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://codesandbox.io/u/bryanlindsey"
+                  className="hover:underline"
+                >
+                  CodeSandbox
+                </a>
+              </li>
             </ul>
           </div>
           <div>
             <h4>{"● INITIATIVES"}</h4>
             <ul className="mt-6">
-              <li>Thing 1</li>
-              <li>Thing 2</li>
-              <li>Thing 3</li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Coding
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Parenting
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Gaming
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Relaxing
+                </a>
+              </li>
             </ul>
           </div>
           <div>
             <h4>{"● OFFICES"}</h4>
             <ul className="mt-6">
-              <li>Spring Hill - TN</li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Spring Hill - TN
+                </a>
+              </li>
               <li>{"It's just the one"}</li>
-              <li>{"Seriously, that's it"}</li>
+              <li>{"Yep, that's it"}</li>
             </ul>
           </div>
         </div>
