@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import CustomCursorArea from "./components/CustomCursorArea";
+import CustomCursorArea from "../components/CustomCursorArea";
 
 export function HeroSection() {
   const customCursorContainerRef = useRef<HTMLDivElement>(null!);

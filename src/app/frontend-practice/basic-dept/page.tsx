@@ -1,13 +1,13 @@
-import { FeaturedEngagments } from "./FeaturedEngagments";
-import { FeaturedNews } from "./FeaturedNews";
-import { Footer } from "./Footer";
+import { FeaturedEngagments } from "./sections/FeaturedEngagments";
+import { FeaturedNews } from "./sections/FeaturedNews";
+import { Footer } from "./sections/Footer";
 import { SmoothScroll } from "./components/SmoothScroll";
-import { Header } from "./Header";
-import { HeroSection } from "./HeroSection";
+import { Header } from "./sections/Header";
+import { HeroSection } from "./sections/HeroSection";
 import "./main.css";
-import { SpotlightSection } from "./SpotlightSection";
-import { FeaturedProjects } from "./FeaturedProjects";
-import { IntroSection } from "./IntroSection";
+import { SpotlightSection } from "./sections/SpotlightSection";
+import { FeaturedProjects } from "./sections/FeaturedProjects";
+import { IntroSection } from "./sections/IntroSection";
 
 export default function Page() {
   return (

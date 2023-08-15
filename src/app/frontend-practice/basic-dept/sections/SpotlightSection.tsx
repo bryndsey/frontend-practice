@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { LinkButton } from "./components/LinkButton";
+import { LinkButton } from "../components/LinkButton";
 import { useInView } from "@react-spring/web";
 
 export function SpotlightSection() {
