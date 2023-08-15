@@ -3,7 +3,7 @@
 import useResizeObserver from "@react-hook/resize-observer";
 import { useCallback, useRef } from "react";
 
-export function FeaturedEngagments() {
+export function FeaturedEngagements() {
   const sectionRef = useRef<HTMLElement>(null!);
   const contentRef = useRef<HTMLUListElement>(null!);
   const scrollIndicatorRef = useRef<HTMLDivElement>(null!);
@@ -26,7 +26,7 @@ export function FeaturedEngagments() {
 
   return (
     <section className="overflow-visible p-10 md:p-16 xl:p-20" ref={sectionRef}>
-      <h2>FEATURED ENGAGMENTS</h2>
+      <h2 className="text-2xl font-semibold">FEATURED ENGAGEMENTS</h2>
 
       {/* TODO: Don't hardcode the margin offset to account for padding - have it be calculated instead */}
       <ul
@@ -55,7 +55,9 @@ export function FeaturedEngagments() {
 function EngagementItem() {
   return (
     <li className="w-[75vw] flex-shrink-0 md:w-[40vw] lg:w-[30vw]">
-      <div className="bg-content h-10 w-10 rounded-full"></div>
+      <figure className="font-serif text-4xl font-extrabold italic">
+        LOGO
+      </figure>
       <h3 className="before:bg-content relative mt-8 pt-12 font-bold before:absolute before:top-0 before:block before:h-[2px] before:w-5">
         CLIENT NAME
       </h3>
