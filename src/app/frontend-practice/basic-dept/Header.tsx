@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { useSmoothScroll } from "./SmoothScroll";
+import { useSmoothScroll } from "./components/SmoothScroll";
 import Link from "next/link";
 
 export function Header() {

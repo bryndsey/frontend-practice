@@ -1,7 +1,7 @@
 import { FeaturedEngagments } from "./FeaturedEngagments";
 import { FeaturedNews } from "./FeaturedNews";
 import { Footer } from "./Footer";
-import { SmoothScroll } from "./SmoothScroll";
+import { SmoothScroll } from "./components/SmoothScroll";
 import { Header } from "./Header";
 import { HeroSection } from "./HeroSection";
 import "./main.css";
