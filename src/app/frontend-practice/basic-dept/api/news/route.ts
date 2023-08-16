@@ -27,7 +27,6 @@ export async function GET(request: Request) {
         dateString: "8.12.23",
         thumbnailUrl: PlaceholderImage.src,
       },
-      { test: process.env },
     ]),
     { status: 200 },
   );
