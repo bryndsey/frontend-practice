@@ -7,13 +7,13 @@ export async function GET(request: Request) {
         title: "First News Article",
         subtitle: "This is content about what the first article contains",
         dateString: "8.15.23",
-        thumbnailUrl: PlaceholderImage.blurDataURL,
+        thumbnailUrl: PlaceholderImage.src,
       },
       {
         title: "Second News Article",
         subtitle: "This is content about what the second article contains",
         dateString: "8.14.23",
-        thumbnailUrl: PlaceholderImage,
+        thumbnailUrl: PlaceholderImage.src,
       },
       {
         title: "A Third News Article",
@@ -27,6 +27,7 @@ export async function GET(request: Request) {
         dateString: "8.12.23",
         thumbnailUrl: PlaceholderImage.src,
       },
+      { test: process.env },
     ]),
     { status: 200 },
   );
