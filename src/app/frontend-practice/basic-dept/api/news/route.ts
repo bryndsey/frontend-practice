@@ -7,13 +7,13 @@ export async function GET(request: Request) {
         title: "First News Article",
         subtitle: "This is content about what the first article contains",
         dateString: "8.15.23",
-        thumbnailUrl: PlaceholderImage.src,
+        thumbnailUrl: PlaceholderImage.blurDataURL,
       },
       {
         title: "Second News Article",
         subtitle: "This is content about what the second article contains",
         dateString: "8.14.23",
-        thumbnailUrl: PlaceholderImage.src,
+        thumbnailUrl: PlaceholderImage,
       },
       {
         title: "A Third News Article",
