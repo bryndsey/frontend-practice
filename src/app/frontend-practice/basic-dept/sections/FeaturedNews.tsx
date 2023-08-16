@@ -1,21 +1,10 @@
 import { LinkButton } from "../components/LinkButton";
 import Image from "next/image";
 import { NewsArticle } from "../types/NewsArticle";
+import fetchNews from "../api/news/fetchNews";
 
 async function getData() {
-  const urlRoot =
-    process.env.NODE_ENV === "development"
-      ? `http://localhost:${process.env.PORT}`
-      : `https://${process.env.VERCEL_URL}`;
-
-  const res = await fetch(`${urlRoot}/frontend-practice/basic-dept/api/news`);
-
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
+  return await fetchNews();
 }
 
 export async function FeaturedNews() {
