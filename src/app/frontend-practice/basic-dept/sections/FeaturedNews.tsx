@@ -83,7 +83,7 @@ function NewsItem({
           {"->"}
         </figure>
         <span className="text-xs">
-          {<b>PRESS</b>}
+          {<b>PRESS </b>}
           {dateString}
         </span>
       </div>
