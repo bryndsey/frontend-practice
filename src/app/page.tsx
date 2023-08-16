@@ -1,4 +1,5 @@
 import Link from "next/link";
+import "./main.css";
 
 function ProjectItem({
   name,
@@ -39,9 +40,9 @@ function ProjectItem({
 
 export default function Home() {
   return (
-    <main className="flex flex-col overflow-hidden sm:h-screen sm:flex-row">
-      <section className="flex flex-col justify-between gap-6 bg-rose-300 p-10 sm:w-1/2 lg:p-20">
-        <h1 className="text-xl font-bold sm:text-4xl">
+    <main className="flex flex-col overflow-hidden md:h-screen md:flex-row">
+      <section className="flex flex-col justify-between gap-6 bg-rose-300 p-10 md:w-1/2 md:max-w-sm lg:max-w-md lg:p-20">
+        <h1 className="text-xl font-bold md:text-4xl">
           {"Bryan's Frontend Practice"}
         </h1>
         <p className="text-sm sm:text-base">
