@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import PlaceholderImage from "./pexels-emilio-gonzález-17781404.jpg";
+import PlaceholderImage from "@assets/pexels-emilio-gonzález-17781404.jpg";
 import { useState } from "react";
 
 export function ProjectGridItem(props: { text: string }) {
