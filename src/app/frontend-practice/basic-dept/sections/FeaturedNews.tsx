@@ -1,14 +1,6 @@
 import { LinkButton } from "../components/LinkButton";
 import Image from "next/image";
-
-type NewsArticle = {
-  title: string;
-  subtitle: string;
-  dateString: string;
-  thumbnailUrl: string;
-  thumbnailWidth: number;
-  thumbnailHeight: number;
-};
+import { NewsArticle } from "../types/NewsArticle";
 
 async function getData() {
   const urlRoot =
