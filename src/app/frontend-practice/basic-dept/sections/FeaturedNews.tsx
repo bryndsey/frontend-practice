@@ -10,6 +10,10 @@ async function getData() {
 export async function FeaturedNews() {
   const data = await getData();
 
+  if (data === null) {
+    return null;
+  }
+
   return (
     <section className="p-10 md:p-16 xl:p-20">
       <div className="flex flex-row justify-between">
