@@ -1,6 +1,9 @@
 import { urlRoot } from "../config";
 
 export default async function fetchNews() {
+  // TODO: Remove this once the endpoint is ready
+  return null;
+
   if (urlRoot === undefined) {
     return null;
   }

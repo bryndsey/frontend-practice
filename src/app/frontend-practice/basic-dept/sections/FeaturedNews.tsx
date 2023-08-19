@@ -3,16 +3,16 @@ import Image from "next/image";
 import { NewsArticle } from "../types/NewsArticle";
 import fetchNews from "../api/news/fetchNews";
 
-async function getData() {
-  return await fetchNews();
-}
+// async function getData() {
+//   return await fetchNews();
+// }
 
 export async function FeaturedNews() {
-  const data = await getData();
+  // const data = await getData();
 
-  if (data === null) {
-    return null;
-  }
+  // if (data === null) {
+  //   return null;
+  // }
 
   return (
     <section className="p-10 md:p-16 xl:p-20">
@@ -40,9 +40,9 @@ export async function FeaturedNews() {
         <li>
           <NewsPreviewItem />
         </li>
-        {(data as NewsArticle[]).map((article) => (
+        {/* {(data as NewsArticle[]).map((article) => (
           <NewsItem key={article.title} {...article} />
-        ))}
+        ))} */}
       </ul>
     </section>
   );
