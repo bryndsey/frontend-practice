@@ -3,16 +3,16 @@ import Image from "next/image";
 import { NewsArticle } from "../types/NewsArticle";
 import fetchNews from "../api/news/fetchNews";
 
-// async function getData() {
-//   return await fetchNews();
-// }
+async function getData() {
+  return await fetchNews();
+}
 
 export async function FeaturedNews() {
-  // const data = await getData();
+  const data = await getData();
 
-  // if (data === null) {
-  //   return null;
-  // }
+  if (data === null) {
+    return null;
+  }
 
   return (
     <section className="p-10 md:p-16 xl:p-20">
@@ -22,27 +22,11 @@ export async function FeaturedNews() {
       </div>
 
       <ul className="mt-8 flex flex-col gap-5 md:gap-10">
-        <li>
-          <NewsPreviewItem />
-        </li>
-        <li>
-          <NewsPreviewItem />
-        </li>
-        <li>
-          <NewsPreviewItem />
-        </li>
-        <li>
-          <NewsPreviewItem />
-        </li>
-        <li>
-          <NewsPreviewItem />
-        </li>
-        <li>
-          <NewsPreviewItem />
-        </li>
-        {/* {(data as NewsArticle[]).map((article) => (
-          <NewsItem key={article.title} {...article} />
-        ))} */}
+        {(data as NewsArticle[]).map((article) => (
+          <li key={article.title}>
+            <NewsItem {...article} />
+          </li>
+        ))}
       </ul>
     </section>
   );
@@ -78,28 +62,6 @@ function NewsItem({
         <span className="text-xs">
           {<b>PRESS </b>}
           {dateString}
-        </span>
-      </div>
-    </a>
-  );
-}
-
-function NewsPreviewItem() {
-  return (
-    <a
-      href="#"
-      className="before:bg-content group relative flex w-full flex-col gap-4 pt-5 before:absolute before:left-0 before:right-0 before:top-0 before:h-[1px] md:flex-row"
-    >
-      <div className="aspect-[4/3] w-full bg-orange-800 md:w-1/3"></div>
-      <div className="relative flex flex-1 flex-col justify-between gap-8">
-        <h3 className="max-w-[75%] text-2xl group-hover:underline">
-          THIS IS THE TITLE OF THE ARTICLE. PLEASE READ ME.
-        </h3>
-        <figure className="absolute bottom-0 right-0 box-content text-2xl md:top-0 md:text-5xl">
-          {"->"}
-        </figure>
-        <span className="text-xs">
-          <b>PRESS</b> 8.7.23
         </span>
       </div>
     </a>
