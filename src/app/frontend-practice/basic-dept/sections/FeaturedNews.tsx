@@ -1,6 +1,19 @@
 import { LinkButton } from "../components/LinkButton";
+import Image from "next/image";
+import { NewsArticle } from "../types/NewsArticle";
+import fetchNews from "../api/news/fetchNews";
 
-export function FeaturedNews() {
+// async function getData() {
+//   return await fetchNews();
+// }
+
+export async function FeaturedNews() {
+  // const data = await getData();
+
+  // if (data === null) {
+  //   return null;
+  // }
+
   return (
     <section className="p-10 md:p-16 xl:p-20">
       <div className="flex flex-row justify-between">
@@ -27,8 +40,47 @@ export function FeaturedNews() {
         <li>
           <NewsPreviewItem />
         </li>
+        {/* {(data as NewsArticle[]).map((article) => (
+          <NewsItem key={article.title} {...article} />
+        ))} */}
       </ul>
     </section>
+  );
+}
+
+function NewsItem({
+  title,
+  subtitle,
+  dateString,
+  thumbnailUrl,
+  thumbnailWidth,
+  thumbnailHeight,
+}: NewsArticle) {
+  return (
+    <a
+      href="#"
+      className="before:bg-content group relative flex w-full flex-col gap-4 pt-5 before:absolute before:left-0 before:right-0 before:top-0 before:h-[1px] md:flex-row"
+    >
+      <Image
+        className="aspect-[4/3] w-full object-cover md:w-1/3"
+        src={thumbnailUrl}
+        alt="article thumbnail"
+        width={thumbnailWidth}
+        height={thumbnailHeight}
+      />
+      <div className="relative flex flex-1 flex-col justify-between gap-8">
+        <h3 className="max-w-[75%] text-2xl uppercase group-hover:underline">
+          {title}
+        </h3>
+        <figure className="absolute bottom-0 right-0 box-content text-2xl md:top-0 md:text-5xl">
+          {"->"}
+        </figure>
+        <span className="text-xs">
+          {<b>PRESS </b>}
+          {dateString}
+        </span>
+      </div>
+    </a>
   );
 }
 
