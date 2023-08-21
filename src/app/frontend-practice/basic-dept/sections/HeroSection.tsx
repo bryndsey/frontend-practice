@@ -8,13 +8,21 @@ export function HeroSection() {
 
   return (
     <section className="h-screen w-full cursor-none bg-green-500">
+      <video
+        loop
+        playsInline
+        autoPlay
+        muted
+        src="/sizzle-reel.mp4"
+        className="h-full w-full object-cover"
+      />
       <CustomCursorArea
         calculateRestPosition={() => ({
           x: customCursorContainerRef.current.clientWidth / 2,
           y: customCursorContainerRef.current.clientHeight / 2,
         })}
         ref={customCursorContainerRef}
-        className="h-full w-full"
+        className="absolute inset-0"
       >
         <CursorContent />
       </CustomCursorArea>
