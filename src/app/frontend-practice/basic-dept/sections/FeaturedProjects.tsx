@@ -1,29 +1,50 @@
-export function FeaturedProjects() {
+import fetchProjects from "../api/projects/fetchProjects";
+import { Project } from "../types/Project";
+import Image from "next/image";
+
+async function getData() {
+  return await fetchProjects();
+}
+
+export async function FeaturedProjects() {
+  const data = await getData();
+
+  if (data === null) return null;
+
   return (
     <ul className="no-scrollbar flex flex-row gap-4 overflow-x-auto p-10 md:p-16 xl:grid xl:grid-cols-3 xl:p-20">
-      <li className="w-[75vw] flex-shrink-0 md:w-[40vw] xl:w-auto">
-        <FeaturedProjectItem />
-      </li>
-      <li className="w-[75vw] flex-shrink-0 md:w-[40vw] xl:w-auto">
-        <FeaturedProjectItem />
-      </li>
-      <li className="w-[75vw] flex-shrink-0 md:w-[40vw] xl:w-auto">
-        <FeaturedProjectItem />
-      </li>
+      {(data as Project[]).slice(0, 3).map((project) => (
+        <li
+          key={project.projectName}
+          className="w-[75vw] flex-shrink-0 md:w-[40vw] xl:w-auto"
+        >
+          <FeaturedProjectItem {...project} />
+        </li>
+      ))}
     </ul>
   );
 }
 
-function FeaturedProjectItem() {
+function FeaturedProjectItem({
+  projectName,
+  about,
+  imageUrl,
+  imageWidth,
+  imageHeight,
+}: Project) {
   return (
-    <a href="#" className="group w-[75vw] md:w-[40vw]">
-      <div className="aspect-[3/4] w-full bg-blue-400"></div>
+    <a href="#" className="group w-[75vw] uppercase md:w-[40vw]">
+      <Image
+        className="aspect-[3/4] w-full object-cover"
+        src={imageUrl}
+        alt="project thumbnail"
+        width={imageWidth}
+        height={imageHeight}
+      />
       <h3 className="pt-2 text-lg font-bold group-hover:underline">
-        PROJECT NAME
+        {projectName}
       </h3>
-      <p className="max-w-[40%] pt-2 text-xs md:max-w-[60%]">
-        SHORT DESCRIPTION OF THE PROJECT
-      </p>
+      <p className="max-w-[40%] pt-2 text-xs md:max-w-[60%]">{about}</p>
     </a>
   );
 }
