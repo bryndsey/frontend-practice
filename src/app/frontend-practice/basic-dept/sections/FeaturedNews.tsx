@@ -45,13 +45,15 @@ function NewsItem({
       href="#"
       className="before:bg-content group relative flex w-full flex-col gap-4 pt-5 before:absolute before:left-0 before:right-0 before:top-0 before:h-[1px] md:flex-row"
     >
-      <Image
-        className="aspect-[4/3] w-full object-cover md:w-1/3"
-        src={thumbnailUrl}
-        alt="article thumbnail"
-        width={thumbnailWidth}
-        height={thumbnailHeight}
-      />
+      <figure className="aspect-[4/3] w-full overflow-hidden md:w-1/3">
+        <Image
+          className="min-h-full min-w-full scale-105 object-cover transition-transform duration-[250ms] group-hover:scale-100"
+          src={thumbnailUrl}
+          alt="article thumbnail"
+          width={thumbnailWidth}
+          height={thumbnailHeight}
+        />
+      </figure>
       <div className="relative flex flex-1 flex-col justify-between gap-8">
         <h3 className="max-w-[75%] text-2xl uppercase group-hover:underline">
           {title}

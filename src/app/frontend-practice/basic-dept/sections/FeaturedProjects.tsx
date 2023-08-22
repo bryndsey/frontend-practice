@@ -34,13 +34,16 @@ function FeaturedProjectItem({
 }: Project) {
   return (
     <a href="#" className="group w-[75vw] uppercase md:w-[40vw]">
-      <Image
-        className="aspect-[3/4] w-full object-cover"
-        src={imageUrl}
-        alt="project thumbnail"
-        width={imageWidth}
-        height={imageHeight}
-      />
+      <figure className="aspect-[3/4] w-full overflow-hidden">
+        <Image
+          className="min-h-full min-w-full scale-105 object-cover transition-transform duration-[250ms] group-hover:scale-100"
+          src={imageUrl}
+          alt="project thumbnail"
+          width={imageWidth}
+          height={imageHeight}
+        />
+      </figure>
+
       <h3 className="pt-2 text-lg font-bold group-hover:underline">
         {projectName}
       </h3>
