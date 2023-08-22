@@ -1,8 +1,10 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { LinkButton } from "../components/LinkButton";
 import { useInView } from "@react-spring/web";
+import Image from "next/image";
+import placeholderImage from "@assets/pexels-emilio-gonzález-17781404.jpg";
 
 export function SpotlightSection() {
   const [sectionRef, inView] = useInView({
@@ -34,7 +36,11 @@ export function SpotlightSection() {
         </p>
         <LinkButton>ABOUT US</LinkButton>
       </div>
-      <div className="aspect-[3/4] w-full bg-purple-400"></div>
+      <Image
+        className="aspect-[3/4] w-full object-cover"
+        src={placeholderImage}
+        alt="placeholder image"
+      />
     </section>
   );
 }
