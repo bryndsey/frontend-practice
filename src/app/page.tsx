@@ -64,7 +64,6 @@ export default function Home() {
             href="/frontend-practice/basic-dept"
             frontendPracticeUrl="https://www.frontendpractice.com/projects/basic"
             originalSiteUrl="https://www.basicagency.com/"
-            isInProgress
           />
         </ul>
       </section>
