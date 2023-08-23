@@ -17,9 +17,9 @@ function ProjectItem({
   const useLink = !isInProgress || process.env.NODE_ENV === "development";
 
   return (
-    <li className="flex flex-row justify-between">
+    <li className="flex w-full max-w-xl flex-row flex-wrap items-start justify-between gap-4 rounded-xl border p-4">
       <div className="flex flex-col">
-        <h2 className="text-xl font-bold">{name}</h2>
+        <h2 className="pb-4 text-xl font-bold">{name}</h2>
         <a
           href={frontendPracticeUrl}
           className="text-sm text-gray-500 hover:text-gray-400"
@@ -33,7 +33,16 @@ function ProjectItem({
           Original Website
         </a>
       </div>
-      {useLink ? <Link href={href}>VIEW</Link> : <p>Coming soon!</p>}
+      {useLink ? (
+        <Link
+          href={href}
+          className="rounded-lg bg-rose-600 px-4 py-2 text-white transition-colors hover:-translate-y-0.5 hover:bg-rose-500 active:translate-y-0.5 active:bg-rose-700"
+        >
+          VIEW
+        </Link>
+      ) : (
+        <p>Coming soon!</p>
+      )}
     </li>
   );
 }
@@ -52,7 +61,7 @@ export default function Home() {
         </p>
       </section>
       <section className="flex-1 overflow-y-scroll p-10 lg:p-20">
-        <ul className="flex w-full flex-col gap-8">
+        <ul className="flex w-full flex-col items-center gap-6 md:items-start">
           <ProjectItem
             name="Oh.Studio Practice"
             href="/frontend-practice/oh-studio"
