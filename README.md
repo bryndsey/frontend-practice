@@ -8,3 +8,11 @@ Rather, I'm focusing on the 80% that takes 20% of the effort (mostly because I d
 This mostly means focusing on things like layout (including general responsiveness), overall styling, and some animation.
 
 Things I'm not focusing on as much are exact padding/margin values, exact responsive breakpoints, icons/images (I'll generally just use placeholders), etc.
+
+## Tech stack
+
+- [Typescript](https://www.typescriptlang.org/)
+- [React](https://react.dev/)
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/) and [react-spring](https://www.react-spring.dev/) for animations
