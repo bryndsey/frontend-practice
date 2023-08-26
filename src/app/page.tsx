@@ -52,9 +52,7 @@ export default function Home() {
             View on GitHub ↗
           </a>
           <p className="pt-8">
-            {
-              "I am developer. I am not a designer. These are sites I made by replicating other designs."
-            }
+            {"A collection of sites I made by replicating other designs."}
           </p>
         </section>
         <section className="w-full pt-12">
