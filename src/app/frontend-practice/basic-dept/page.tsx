@@ -12,7 +12,10 @@ import { IntroSection } from "./sections/IntroSection";
 export default function Page() {
   return (
     <SmoothScroll>
-      <div className="text-content bg-backdrop overflow-x-clip">
+      <div
+        id="basic-dept-root"
+        className="text-content bg-backdrop overflow-x-clip"
+      >
         <Header />
 
         <main className="mb-12 md:mb-24">
