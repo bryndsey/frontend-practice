@@ -17,7 +17,7 @@ function ProjectItem({
   const useLink = !isInProgress || process.env.NODE_ENV === "development";
 
   return (
-    <div className="flex w-full max-w-sm flex-col justify-between gap-8 overflow-clip rounded-xl border p-4 sm:max-w-lg md:flex-row">
+    <div className="flex w-full flex-col justify-between gap-8 overflow-clip rounded-xl border p-4 sm:flex-row">
       <Link href={useLink ? href : ""} className="hover:underline">
         <h2 className="text-xl font-bold">{name}</h2>
       </Link>
@@ -41,31 +41,33 @@ function ProjectItem({
 
 export default function Home() {
   return (
-    <main className="flex flex-col overflow-hidden md:h-screen md:flex-row">
-      <section className="flex flex-col justify-between gap-6 bg-rose-300 p-10 md:w-1/2 md:max-w-sm lg:max-w-md lg:p-20">
-        <h1 className="text-xl font-bold md:text-4xl">
-          {"Bryan's Frontend Practice"}
-        </h1>
-        <p className="text-sm sm:text-base">
+    <main className="mx-auto flex max-w-xl flex-col items-center px-4 py-8 md:px-8 md:py-12">
+      <section className="">
+        <h1 className="text-4xl font-bold">{"Bryan's Frontend Practice"}</h1>
+        <p className="pt-8">
           {
             "I am developer. I am not a designer. These are sites I made by replicating other designs."
           }
         </p>
       </section>
-      <section className="flex-1 overflow-y-scroll p-10 lg:p-20">
-        <ul className="flex w-full flex-col items-center gap-6 md:items-start">
-          <ProjectItem
-            name="Oh.Studio Practice"
-            href="/frontend-practice/oh-studio"
-            frontendPracticeUrl="https://www.frontendpractice.com/projects/oh-studio"
-            originalSiteUrl="https://oh.studio/"
-          />
-          <ProjectItem
-            name="BASIC/DEPT Practice"
-            href="/frontend-practice/basic-dept"
-            frontendPracticeUrl="https://www.frontendpractice.com/projects/basic"
-            originalSiteUrl="https://www.basicagency.com/"
-          />
+      <section className="w-full pt-12">
+        <ul className="flex w-full flex-col items-center gap-6">
+          <li className="w-full">
+            <ProjectItem
+              name="Oh.Studio Practice"
+              href="/frontend-practice/oh-studio"
+              frontendPracticeUrl="https://www.frontendpractice.com/projects/oh-studio"
+              originalSiteUrl="https://oh.studio/"
+            />
+          </li>
+          <li className="w-full">
+            <ProjectItem
+              name="BASIC/DEPT Practice"
+              href="/frontend-practice/basic-dept"
+              frontendPracticeUrl="https://www.frontendpractice.com/projects/basic"
+              originalSiteUrl="https://www.basicagency.com/"
+            />
+          </li>
         </ul>
       </section>
     </main>
