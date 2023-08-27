@@ -1,10 +1,10 @@
+import "./main.css";
 import { FeaturedEngagements } from "./sections/FeaturedEngagements";
 import { FeaturedNews } from "./sections/FeaturedNews";
 import { Footer } from "./sections/Footer";
 import { SmoothScroll } from "./components/SmoothScroll";
 import { Header } from "./sections/Header";
 import { HeroSection } from "./sections/HeroSection";
-import "./main.css";
 import { SpotlightSection } from "./sections/SpotlightSection";
 import { FeaturedProjects } from "./sections/FeaturedProjects";
 import { IntroSection } from "./sections/IntroSection";
@@ -18,7 +18,7 @@ export default function Page() {
       >
         <Header />
 
-        <main className="mb-12 md:mb-24">
+        <main className="text-content bg-backdrop mb-12 md:mb-24">
           <HeroSection />
 
           <IntroSection />

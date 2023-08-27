@@ -27,6 +27,7 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <main
+      id="oh-studio-root"
       className={`flex min-h-screen flex-col items-center ${font.variable} font-sans`}
     >
       <NavBar />
