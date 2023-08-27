@@ -12,7 +12,8 @@ export function SpotlightSection() {
   });
 
   useEffect(() => {
-    const root = document.documentElement;
+    const root = document.getElementById("basic-dept-root");
+    if (root === null) return;
     if (inView) {
       root.style.setProperty("--color-content", "249 205 205");
       root.style.setProperty("--color-backdrop", "37 36 34");

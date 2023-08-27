@@ -9,4 +9,5 @@ module.exports = {
     },
   },
   plugins: [],
+  important: "#oh-studio-root",
 };
