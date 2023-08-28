@@ -16,3 +16,4 @@ Things I'm not focusing on as much are exact padding/margin values, exact respon
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/) and [react-spring](https://www.react-spring.dev/) for animations
+- [Zod](https://zod.dev/)
