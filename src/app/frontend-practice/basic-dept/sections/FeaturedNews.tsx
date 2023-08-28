@@ -22,7 +22,7 @@ export async function FeaturedNews() {
       </div>
 
       <ul className="mt-8 flex flex-col gap-5 md:gap-10">
-        {(data as NewsArticle[]).map((article) => (
+        {data.map((article) => (
           <li key={article.title}>
             <NewsItem {...article} />
           </li>

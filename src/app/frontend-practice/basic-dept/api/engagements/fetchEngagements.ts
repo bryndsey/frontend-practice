@@ -1,3 +1,4 @@
+import { parseEngagementList } from "../../types/Engagement";
 import { urlRoot } from "../config";
 
 export default async function fetchEngagements() {
@@ -8,7 +9,8 @@ export default async function fetchEngagements() {
       throw new Error("Failed to fetch data");
     }
 
-    return res.json();
+    const data = parseEngagementList(await res.json());
+    return data;
   } catch (error) {
     console.log(error);
     return null;

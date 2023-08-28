@@ -1,3 +1,4 @@
+import { NewsArticle, parseNewsArticleList } from "../../types/NewsArticle";
 import { urlRoot } from "../config";
 
 export default async function fetchNews() {
@@ -8,7 +9,8 @@ export default async function fetchNews() {
       throw new Error("Failed to fetch data");
     }
 
-    return res.json();
+    const body = await res.json();
+    return parseNewsArticleList(body);
   } catch (error) {
     console.log(error);
     return null;

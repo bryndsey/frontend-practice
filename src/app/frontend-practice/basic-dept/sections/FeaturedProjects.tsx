@@ -13,7 +13,7 @@ export async function FeaturedProjects() {
 
   return (
     <ul className="no-scrollbar flex flex-row gap-4 overflow-x-auto p-10 md:p-16 xl:grid xl:grid-cols-3 xl:p-20">
-      {(data as Project[]).slice(0, 3).map((project) => (
+      {data.slice(0, 3).map((project) => (
         <li
           key={project.projectName}
           className="w-[75vw] flex-shrink-0 md:w-[40vw] xl:w-auto"

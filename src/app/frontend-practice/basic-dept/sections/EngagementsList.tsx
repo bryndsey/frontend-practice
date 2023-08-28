@@ -1,22 +1,19 @@
-import fetchEngagements from "../api/engagements/fetchEngagements";
 import { Engagement } from "../types/Engagement";
 
-async function getData() {
-  return await fetchEngagements();
-}
-export async function EngagementsList() {
-  const data = await getData();
-
-  if (data === null) return null;
-
+export function EngagementsList({
+  engagements,
+}: {
+  engagements: Engagement[];
+}) {
   return (
     <ul className="relative flex flex-row gap-4">
-      {(data as Engagement[]).map((engagement) => (
+      {engagements.map((engagement) => (
         <EngagementItem key={engagement.clientName} {...engagement} />
       ))}
     </ul>
   );
 }
+
 function EngagementItem({ logoString, clientName, about }: Engagement) {
   return (
     <li className="w-[75vw] flex-shrink-0 md:w-[40vw] lg:w-[30vw]">

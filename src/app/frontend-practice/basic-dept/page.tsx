@@ -18,7 +18,7 @@ export default function Page() {
       >
         <Header />
 
-        <main className="text-content bg-backdrop mb-12 md:mb-24">
+        <main className="text-content bg-backdrop pb-12 md:pb-24">
           <HeroSection />
 
           <IntroSection />
