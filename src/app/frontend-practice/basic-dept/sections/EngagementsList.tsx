@@ -4,6 +4,7 @@ import { Engagement } from "../types/Engagement";
 async function getData() {
   return await fetchEngagements();
 }
+
 export async function EngagementsList() {
   const data = await getData();
 
@@ -11,12 +12,13 @@ export async function EngagementsList() {
 
   return (
     <ul className="relative flex flex-row gap-4">
-      {(data as Engagement[]).map((engagement) => (
+      {data.map((engagement) => (
         <EngagementItem key={engagement.clientName} {...engagement} />
       ))}
     </ul>
   );
 }
+
 function EngagementItem({ logoString, clientName, about }: Engagement) {
   return (
     <li className="w-[75vw] flex-shrink-0 md:w-[40vw] lg:w-[30vw]">
