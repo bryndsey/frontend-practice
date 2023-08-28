@@ -1,3 +1,4 @@
+import { parseProjectList } from "../../types/Project";
 import { urlRoot } from "../config";
 
 export default async function fetchProjects() {
@@ -8,7 +9,8 @@ export default async function fetchProjects() {
       throw new Error("Failed to fetch data");
     }
 
-    return res.json();
+    const body = await res.json();
+    return parseProjectList(body);
   } catch (error) {
     console.log(error);
     return null;
