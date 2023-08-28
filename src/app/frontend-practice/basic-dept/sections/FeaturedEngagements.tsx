@@ -3,8 +3,26 @@
 import useResizeObserver from "@react-hook/resize-observer";
 import { useCallback, useRef } from "react";
 import { EngagementsList } from "./EngagementsList";
+import fetchEngagements from "../api/engagements/fetchEngagements";
+import { Engagement } from "../types/Engagement";
 
-export function FeaturedEngagements() {
+async function getData() {
+  return await fetchEngagements();
+}
+
+export async function FeaturedEngagements() {
+  const data = await getData();
+
+  if (data === null) return null;
+
+  return <FeaturedEngagmentsContent engagements={data} />;
+}
+
+function FeaturedEngagmentsContent({
+  engagements,
+}: {
+  engagements: Engagement[];
+}) {
   const sectionRef = useRef<HTMLElement>(null!);
   const contentRef = useRef<HTMLDivElement>(null!);
   const scrollIndicatorRef = useRef<HTMLDivElement>(null!);
@@ -36,7 +54,7 @@ export function FeaturedEngagements() {
         onScroll={updateCustomScrollbar}
       >
         <div className="w-fit px-10 md:px-16 xl:px-20">
-          <EngagementsList />
+          <EngagementsList engagements={engagements} />
         </div>
       </div>
 
